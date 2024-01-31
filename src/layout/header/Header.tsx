@@ -19,13 +19,13 @@ export const Header = (props: HeaderPropsType) => {
 };
 
 const StyledHeader = styled.header`
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 `
 const StyledNavigationBlock = styled.div`
     display: flex;
-    align-items: center;
     gap: 54px;
 `
 
