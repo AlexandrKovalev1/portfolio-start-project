@@ -2,6 +2,8 @@ import './App.css';
 import {Header} from "./layout/header/Header";
 import styled from "styled-components";
 import {Main} from "./layout/sections/main/Main";
+import {MyTechStack} from "./layout/sections/myTechStack/MyTechStack";
+import Projects from "./layout/sections/projects/Projects";
 
 
 function App() {
@@ -9,17 +11,19 @@ function App() {
         <AppWrapperStyled>
             <Header/>
             <Main/>
+            <MyTechStack/>
+            <Projects/>
         </AppWrapperStyled>
     );
 }
 
 
 const AppWrapperStyled = styled.div`
-    padding: 41px 177px 0;
-    &>*:not(:last-child){
-        margin-bottom: 200px;
-    }
-    
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    max-width: 1204px;
+    margin: 0 auto;
 `
 
 export default App;

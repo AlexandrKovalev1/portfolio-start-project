@@ -18,34 +18,37 @@ export const Main = () => {
                 </MainTitle>
                 <BlockPhotoCard>
                     <Photo src={photo} alt={'photo'}/>
-                    <StyledSvg width="628" height="628" viewBox="0 0 628 628" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <StyledAbstractImg width="628" height="628" viewBox="0 0 628 628" fill={'none'}
+                                       xmlns="http://www.w3.org/2000/svg">
                         <use xlinkHref={`${abstracts}#'darkAbstract'`}/>
-                    </StyledSvg>
+                    </StyledAbstractImg>
                 </BlockPhotoCard>
             </FlexContainer>
         </main>
     );
 };
 
-const StyledSvg = styled.svg`
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
+const StyledAbstractImg = styled.svg`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-    
 `
 
 const MainTitle = styled.div``;
 
 const BlockPhotoCard = styled.div`
-position: relative;`
+    position: relative;`
 
 const Photo = styled.img`
-    width: 349px;
-    height: 349px;
+    max-width: 349px;
+    min-width: 180px;
+    width: 100%;
+    max-height: 349px;
+    height: 100%;
     border: 9px solid transparent;
-    background-image: linear-gradient(white, white), radial-gradient(circle at top , #E70FAA,#00C0FD);
+    background-image: linear-gradient(white, white), radial-gradient(circle at top, #E70FAA, #00C0FD);
     background-origin: border-box;
     background-clip: content-box, border-box;
     border-radius: 50%;
