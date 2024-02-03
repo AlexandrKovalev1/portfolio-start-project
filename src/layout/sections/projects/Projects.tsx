@@ -7,6 +7,7 @@ import coverImg from "../../../assets/images/projectCardCover.jpg";
 const Projects = () => {
 
     const ProjectsState = [{
+        id: 1,
         cover: coverImg,
         heading: "Project Tile goes here",
         description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -14,6 +15,7 @@ const Projects = () => {
         links: {preview: "#", code: "#"}
     },
         {
+            id: 2,
             cover: coverImg,
             heading: "Project Tile goes here",
             description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -21,6 +23,7 @@ const Projects = () => {
             links: {preview: "#", code: "#"}
         },
         {
+            id: 3,
             cover: coverImg,
             heading: "Project Tile goes here",
             description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -28,6 +31,7 @@ const Projects = () => {
             links: {preview: "#", code: "#"}
         },
         {
+            id: 4,
             cover: coverImg,
             heading: "Project Tile goes here",
             description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -35,6 +39,7 @@ const Projects = () => {
             links: {preview: "#", code: "#"}
         },
         {
+            id: 5,
             cover: coverImg,
             heading: "Project Tile goes here",
             description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -43,8 +48,12 @@ const Projects = () => {
         }];
 
     const ProjectsItems = ProjectsState.map(item =>
-        <ProjectCard cover={item.cover} heading={item.heading} description={item.description} stack={item.stack}
-                     links={item.links}/>)
+        <ProjectCard cover={item.cover}
+                     heading={item.heading}
+                     description={item.description}
+                     stack={item.stack}
+                     links={item.links}
+                     key={item.id}/>)
 
     return (
         <div>

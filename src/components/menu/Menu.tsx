@@ -1,13 +1,15 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {MenuItem} from "./menuItem/MenuItem";
 
 type MenuPropsType = {
     menuState: Array<{
         itemHeading: string,
         link: string,
-        id: number
-    }>
+        id: number,
+
+    }>,
+    type: "header" | "burger" | "footer"
 };
 export const Menu = (props: MenuPropsType) => {
 
@@ -19,7 +21,7 @@ export const Menu = (props: MenuPropsType) => {
         />);
 
     return (
-        <StyledNav>
+        <StyledNav type={props.type}>
             <ul>
                 {menuItems}
             </ul>
@@ -27,10 +29,41 @@ export const Menu = (props: MenuPropsType) => {
     );
 };
 
-const StyledNav = styled.nav`
+type StyledNavPropsType = {
+    type: "header" | "burger" | "footer"
+};
+
+const StyledNav = styled.nav<StyledNavPropsType>`
     ul {
         display: flex;
-        gap: 54px;
-    }
+        list-style: none;
+    };
+
+    ${props => props.type === "header" && css<StyledNavPropsType>`
+        ul {
+            gap: 54px;
+        };
+
+    `};
+
+    ${props => props.type === "burger" && css<StyledNavPropsType>`
+        ul {
+            flex-direction: column;
+            align-items: center;
+            gap:20px;
+        };
+
+
+        @media (max-height: 650px) {
+            ul{
+                flex-shrink: 10;
+            }
+        }
+    
+    `};
+
+    ${props => props.type === "footer" && css<StyledNavPropsType>``};
+
+
 
 `;

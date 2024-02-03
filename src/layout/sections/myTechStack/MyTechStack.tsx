@@ -6,25 +6,26 @@ import {Icon} from "../../../components/icon/Icon";
 
 export const MyTechStack = () => {
 
-    const myStackState = [{id: "html", width: "120", height: "120", viewBox: "0 0 120 120"},
-        {id: "css", width: "120", height: "120", viewBox: "0 0 120 120"},
-        {id: "js", width: "120", height: "120", viewBox: "0 0 120 120"},
-        {id: "vsCode", width: "120", height: "120", viewBox: "0 0 120 120"},
-        {id: "react", width: "120", height: "120", viewBox: "-3 -9 120 120"},
-        {id: "redux", width: "120", height: "120", viewBox: "-9 -10 120 120"},
-        {id: "git", width: "120", height: "120", viewBox: "-7 -8 120 120"},
-        {id: "iconGithub", width: "120", height: "120", viewBox: "-18 -20 120 120"},
-        {id: "react", width: "120", height: "120", viewBox: "-3 -9 120 120"},
-        {id: "react", width: "120", height: "120", viewBox: "-3 -9 120 120"},
-        {id: "react", width: "120", height: "120", viewBox: "-3 -9 120 120"}
+    const myStackState = [{id:0,idIcon: "html", width: "120", height: "120", viewBox: "0 0 120 120"},
+        {id:1,idIcon: "css", width: "120", height: "120", viewBox: "0 0 120 120"},
+        {id:2,idIcon: "js", width: "120", height: "120", viewBox: "0 0 120 120"},
+        {id:3,idIcon: "vsCode", width: "120", height: "120", viewBox: "0 0 120 120"},
+        {id:4,idIcon: "react", width: "120", height: "120", viewBox: "-3 -9 120 120"},
+        {id:5,idIcon: "redux", width: "120", height: "120", viewBox: "-9 -10 120 120"},
+        {id:6,idIcon: "git", width: "120", height: "120", viewBox: "-7 -8 120 120"},
+        {id:7,idIcon: "iconGithub", width: "120", height: "120", viewBox: "-18 -20 120 120"},
+        {id:8,idIcon: "react", width: "120", height: "120", viewBox: "-3 -9 120 120"},
+        {id:9,idIcon: "react", width: "120", height: "120", viewBox: "-3 -9 120 120"},
+        {id:10,idIcon: "react", width: "120", height: "120", viewBox: "-3 -9 120 120"}
 
     ];
 
     const MyStacks = myStackState.map(item => <Icon
-        iconId={item.id}
+        iconId={item.idIcon}
         width={item.width}
         height={item.height}
         viewBox={item.viewBox}
+        key={item.id}
     />)
 
     return (

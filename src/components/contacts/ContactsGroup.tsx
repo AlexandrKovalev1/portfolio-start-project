@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {ContactListItem} from "./contactListItem/ContactListItem";
 
 
@@ -9,6 +9,7 @@ type ContactsGroupPropsType = {
         viewBox: string,
         id: number
     }>,
+    type: "header" | "burger" | "footer",
 }
 
 
@@ -22,7 +23,7 @@ export const ContactsGroup = (props: ContactsGroupPropsType) => {
         />);
 
     return (
-        <ContactsGroupWrapper>
+        <ContactsGroupWrapper type={props.type}>
             <ul>
                 {contactsListItems}
             </ul>
@@ -30,9 +31,32 @@ export const ContactsGroup = (props: ContactsGroupPropsType) => {
     );
 };
 
-const ContactsGroupWrapper = styled.div`
+type ContactsGroupWrapperPropsType = {
+    type: "header" | "burger" | "footer",
+}
+
+const ContactsGroupWrapper = styled.div<ContactsGroupWrapperPropsType>`
     ul {
         display: flex;
-        gap: 20px;
-    }
+        list-style: none;
+    };
+
+    ${props => props.type === "header" && css<ContactsGroupWrapperPropsType>`
+        ul {
+            gap: 20px;
+        }
+    `};
+
+    ${props => props.type === "burger" && css<ContactsGroupWrapperPropsType>`
+        ul {
+            justify-content: center;
+            gap: 50px;
+        }
+    `};
+
+    ${props => props.type === "footer" && css<ContactsGroupWrapperPropsType>``};
+
+
+
+
 `;

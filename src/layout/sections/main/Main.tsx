@@ -29,6 +29,7 @@ export const Main = () => {
 };
 
 const StyledAbstractImg = styled.svg`
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
