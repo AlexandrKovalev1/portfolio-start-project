@@ -1,31 +1,30 @@
 import React from 'react';
 import styled from "styled-components";
-import {Icon} from "../icon/Icon";
+import {ContactListItem} from "./contactListItem/ContactListItem";
 
-export const ContactsGroup = () => {
+
+type ContactsGroupPropsType = {
+    menuState: Array<{
+        iconId: string,
+        viewBox: string,
+        id: number
+    }>,
+}
+
+
+export const ContactsGroup = (props: ContactsGroupPropsType) => {
+
+    const contactsListItems = props.menuState.map(item =>
+        <ContactListItem
+            iconId={item.iconId}
+            viewBox={item.viewBox}
+            key={item.id}
+        />);
+
     return (
         <ContactsGroupWrapper>
             <ul>
-                <li>
-                    <a href="">
-                        <Icon iconId={'iconGithub'} width={'30'} height={'30'} viewBox={'0 0 88 88'}/>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <Icon iconId={'instagram'} width={'30'} height={'30'} viewBox={'0 0 32 32'}/>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <Icon iconId={'telegram'} width={'30'} height={'30'} viewBox={'0 0 32 35'}/>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <Icon iconId={'whatsapp'} width={'30'} height={'30'} viewBox={'0 0 32 32'}/>
-                    </a>
-                </li>
+                {contactsListItems}
             </ul>
         </ContactsGroupWrapper>
     );
@@ -36,4 +35,4 @@ const ContactsGroupWrapper = styled.div`
         display: flex;
         gap: 20px;
     }
-`
+`;

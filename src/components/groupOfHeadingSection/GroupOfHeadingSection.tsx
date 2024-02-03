@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 import styled, {css} from "styled-components";
 
 type GroupOfHeadingSectionPropsType = {
     heading: string,
     description: string,
-    size: 'large' | 'medium' | 'mobile',
+    size: "large" | "medium" | "mobile",
 }
 export const GroupOfHeadingSection = (props: GroupOfHeadingSectionPropsType) => {
 
@@ -18,14 +18,14 @@ export const GroupOfHeadingSection = (props: GroupOfHeadingSectionPropsType) => 
 };
 
 type StyledHeadingGroupWrapperPropsType = {
-    size: 'large' | 'medium' | 'mobile'
+    size: "large" | "medium" | "mobile"
 };
 
 const StyledHeadingGroupWrapper = styled.div<StyledHeadingGroupWrapperPropsType>`
     display: flex;
     flex-direction: column;
 
-    ${props => props.size === 'large' && css<StyledHeadingGroupWrapperPropsType>`
+    ${props => props.size === "large" && css<StyledHeadingGroupWrapperPropsType>`
         align-items: center;
 
         h2 {
@@ -41,7 +41,7 @@ const StyledHeadingGroupWrapper = styled.div<StyledHeadingGroupWrapperPropsType>
 
     `};
 
-    ${props => props.size === 'medium' && css<StyledHeadingGroupWrapperPropsType>`
+    ${props => props.size === "medium" && css<StyledHeadingGroupWrapperPropsType>`
         h2 {
             font-size: 42px;
         }

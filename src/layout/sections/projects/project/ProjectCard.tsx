@@ -1,25 +1,29 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
-import {Icon} from "../../../../components/icon/Icon";
 import {CustomLink} from "./customLink/CustomLink";
+import {ProjectContent} from "./projectContent/ProjectContent";
 
 type ProjectCardPropsType = {
     cover: string,
+    heading: string,
+    description?: string ,
+    stack: string,
+    links: {
+        preview: string,
+        code: string
+    }
 }
 export const ProjectCard = (props: ProjectCardPropsType) => {
+
     return (
         <StyledProjectWrapper>
             <StyledImg src={props.cover}/>
-            <StyledCardContentWrapper>
-                <h3></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi debitis ipsum laudantium magnam
-                    mollitia, quibusdam recusandae rem sed! At dolores in neque odit officia quis ut vel? Blanditiis
-                    ratione, ut!</p>
-                <span></span>
-            </StyledCardContentWrapper>
+            <ProjectContent heading={props.heading}
+                            description={props.description}
+                            stack={props.stack}/>
             <StyledLinksContainer>
-                <CustomLink href={"#"} type={"preview"}/>
-                <CustomLink href={"#"} type={"code"}/>
+                <CustomLink href={props.links.preview} type={"preview"}/>
+                <CustomLink href={props.links.code} type={"code"}/>
             </StyledLinksContainer>
 
         </StyledProjectWrapper>
@@ -40,13 +44,8 @@ const StyledProjectWrapper = styled.div`
 `;
 
 const StyledImg = styled.img`
-    object-fit: cover;
 `;
 
-const StyledCardContentWrapper = styled.div`
-    padding: 28px 28px 0;
-    flex-grow: 1;
-`;
 
 const StyledLinksContainer = styled.div`
     display: flex;

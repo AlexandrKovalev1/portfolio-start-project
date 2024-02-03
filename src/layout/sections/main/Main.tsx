@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 import {FlexContainer} from "../../../components/FlexContainer";
 import styled from "styled-components";
-import abstracts from '../../../assets/images/abstracts-sprite.svg';
-import photo from '../../../assets/images/avatar.jpg'
+import abstracts from "../../../assets/images/abstracts-sprite.svg";
+import photo from "../../../assets/images/avatar.jpg"
 
 export const Main = () => {
     return (
         <main>
-            <FlexContainer align={'center'} justify={'space-between'}>
+            <FlexContainer align={"center"} justify={"space-between"}>
                 <MainTitle>
                     <p>
                         Hi 👋,<br/>
@@ -17,10 +17,10 @@ export const Main = () => {
                     <h1> I am frontend developer</h1>
                 </MainTitle>
                 <BlockPhotoCard>
-                    <Photo src={photo} alt={'photo'}/>
-                    <StyledAbstractImg width="628" height="628" viewBox="0 0 628 628" fill={'none'}
+                    <Photo src={photo} alt={"photo"}/>
+                    <StyledAbstractImg width="628" height="628" viewBox="0 0 628 628" fill={"none"}
                                        xmlns="http://www.w3.org/2000/svg">
-                        <use xlinkHref={`${abstracts}#'darkAbstract'`}/>
+                        <use xlinkHref={`${abstracts}#"darkAbstract"`}/>
                     </StyledAbstractImg>
                 </BlockPhotoCard>
             </FlexContainer>

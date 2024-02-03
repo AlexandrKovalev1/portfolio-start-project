@@ -1,25 +1,27 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
+import {MenuItem} from "./menuItem/MenuItem";
 
-export const Menu = () => {
+type MenuPropsType = {
+    menuState: Array<{
+        itemHeading: string,
+        link: string,
+        id: number
+    }>
+};
+export const Menu = (props: MenuPropsType) => {
+
+    const menuItems = props.menuState.map(item =>
+        <MenuItem
+            itemHeading={item.itemHeading}
+            link={item.link}
+            key={item.id}
+        />);
+
     return (
         <StyledNav>
             <ul>
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">About</a>
-                </li>
-                <li>
-                    <a href="">Tech Stack</a>
-                </li>
-                <li>
-                    <a href="">Projects</a>
-                </li>
-                <li>
-                    <a href="">Contact</a>
-                </li>
+                {menuItems}
             </ul>
         </StyledNav>
     );
@@ -31,4 +33,4 @@ const StyledNav = styled.nav`
         gap: 54px;
     }
 
-`
+`;
