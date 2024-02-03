@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
+import {Icon} from "../../../../components/icon/Icon";
+import {CustomLink} from "./customLink/CustomLink";
 
 type ProjectCardPropsType = {
     cover: string,
@@ -10,20 +12,23 @@ export const ProjectCard = (props: ProjectCardPropsType) => {
             <StyledImg src={props.cover}/>
             <StyledCardContentWrapper>
                 <h3></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi debitis ipsum laudantium magnam mollitia, quibusdam recusandae rem sed! At dolores in neque odit officia quis ut vel? Blanditiis ratione, ut!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi debitis ipsum laudantium magnam
+                    mollitia, quibusdam recusandae rem sed! At dolores in neque odit officia quis ut vel? Blanditiis
+                    ratione, ut!</p>
                 <span></span>
-                <StyledLinksContainer>
-                    <a href="#">,dsfdsfs</a>
-                    <a href="#">zxcdsfdf</a>
-                </StyledLinksContainer>
             </StyledCardContentWrapper>
+            <StyledLinksContainer>
+                <CustomLink href={"#"} type={"preview"}/>
+                <CustomLink href={"#"} type={"code"}/>
+            </StyledLinksContainer>
 
         </StyledProjectWrapper>
     );
 };
 
 const StyledProjectWrapper = styled.div`
-    position: relative;
+    display: flex;
+    flex-direction: column;
     max-width: 375px;
     width: 100%;
     min-height: 570px;
@@ -39,16 +44,13 @@ const StyledImg = styled.img`
 `;
 
 const StyledCardContentWrapper = styled.div`
-    min-height: 310px;
-    padding: 28px;
-    //background-color: purple;
+    padding: 28px 28px 0;
+    flex-grow: 1;
 `;
 
 const StyledLinksContainer = styled.div`
     display: flex;
-    flex-shrink: 0;
-    gap: 49px;
-    position: absolute;
-    bottom: 28px;
-    left: 28px;
+    gap: 48px;
+    padding: 28px;
+    line-height: 26px;
 `
