@@ -34,9 +34,10 @@ const StyledHeadingGroupWrapper = styled.div<StyledHeadingGroupWrapperPropsType>
         }
 
         span {
-            margin:49px 0 124px;
+            margin:15px 0 60px;
             font-size: 32px;
             font-weight: 400;
+            text-align: center;
         }
 
     `};

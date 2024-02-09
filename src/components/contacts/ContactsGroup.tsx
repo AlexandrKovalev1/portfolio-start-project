@@ -36,15 +36,24 @@ type ContactsGroupWrapperPropsType = {
 }
 
 const ContactsGroupWrapper = styled.div<ContactsGroupWrapperPropsType>`
+
+    svg {
+        fill: #575757;
+    }
+;
+
     ul {
         display: flex;
-        list-style: none;
-    };
+        gap: 20px;
+    }
+
+    li:hover svg{
+        fill:#E63946
+    }
+;
 
     ${props => props.type === "header" && css<ContactsGroupWrapperPropsType>`
-        ul {
-            gap: 20px;
-        }
+
     `};
 
     ${props => props.type === "burger" && css<ContactsGroupWrapperPropsType>`
@@ -54,7 +63,13 @@ const ContactsGroupWrapper = styled.div<ContactsGroupWrapperPropsType>`
         }
     `};
 
-    ${props => props.type === "footer" && css<ContactsGroupWrapperPropsType>``};
+    ${props => props.type === "footer" && css<ContactsGroupWrapperPropsType>`
+        svg {
+            width: 17px;
+        }
+        
+  
+    `};
 
 
 

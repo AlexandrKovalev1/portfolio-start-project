@@ -34,10 +34,10 @@ const StyledLink = styled.a`
     display: flex;
     align-items: center;
     gap: 12px;
-    
+    text-decoration: underline;
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
-    
-    color:initial;
+
+    color: initial;
 `;

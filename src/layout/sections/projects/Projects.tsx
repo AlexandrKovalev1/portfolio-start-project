@@ -3,6 +3,7 @@ import {GroupOfHeadingSection} from "../../../components/groupOfHeadingSection/G
 import {FlexContainer} from "../../../components/FlexContainer";
 import {ProjectCard} from "./project/ProjectCard";
 import coverImg from "../../../assets/images/projectCardCover.jpg";
+import {Container} from "../../../components/container/Container";
 
 const Projects = () => {
 
@@ -57,11 +58,13 @@ const Projects = () => {
 
     return (
         <div>
-            <GroupOfHeadingSection heading={"Projects"} description={"Things I’ve built so far"} size={"large"}/>
+            <Container width={"1220px"}>
+                <GroupOfHeadingSection heading={"Projects"} description={"Things I’ve built so far"} size={"large"}/>
 
-            <FlexContainer gap={"62px 34px"} wrap={"wrap"} justify={"center"}>
-                {ProjectsItems}
-            </FlexContainer>
+                <FlexContainer gap={"62px 34px"} wrap={"wrap"} justify={"center"}>
+                    {ProjectsItems}
+                </FlexContainer>
+            </Container>
 
 
         </div>

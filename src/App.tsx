@@ -4,6 +4,9 @@ import styled from "styled-components";
 import {Main} from "./layout/sections/main/Main";
 import {MyTechStack} from "./layout/sections/myTechStack/MyTechStack";
 import Projects from "./layout/sections/projects/Projects";
+import {LetSWorkTogether} from "./layout/sections/let’sWorkTogether/Let’sWorkTogether";
+import {Footer} from "./layout/footer/Footer";
+import {WhyHireMe} from "./layout/sections/whyHireMe/WhyHireMe";
 
 
 function App() {
@@ -11,8 +14,11 @@ function App() {
         <AppWrapperStyled>
             <Header/>
             <Main/>
+            <WhyHireMe/>
             <MyTechStack/>
             <Projects/>
+            <LetSWorkTogether/>
+            <Footer/>
         </AppWrapperStyled>
     );
 }
@@ -21,9 +27,10 @@ function App() {
 const AppWrapperStyled = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 200px;
-    max-width: 1204px;
-    margin: 0 auto;
+    //max-width: 1920px;
+    //width: 100%;
+    //margin: 0 auto;
+    //overflow: hidden;
 `
 
 export default App;

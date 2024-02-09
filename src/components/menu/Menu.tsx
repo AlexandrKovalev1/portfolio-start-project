@@ -36,7 +36,6 @@ type StyledNavPropsType = {
 const StyledNav = styled.nav<StyledNavPropsType>`
     ul {
         display: flex;
-        list-style: none;
     };
 
     ${props => props.type === "header" && css<StyledNavPropsType>`
