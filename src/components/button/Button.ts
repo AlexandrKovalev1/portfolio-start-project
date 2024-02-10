@@ -14,6 +14,7 @@ export const Button = styled.button<ButtonPropsType>`
     border: 2px solid;
     border-radius: 31px;
     cursor: pointer;
+    white-space:nowrap;
 
 
     ${props => props.nameOfType === "Get" && css<ButtonPropsType>`

@@ -4,8 +4,9 @@ import {FlexContainer} from "../../../components/FlexContainer";
 import {ProjectCard} from "./project/ProjectCard";
 import coverImg from "../../../assets/images/projectCardCover.jpg";
 import {Container} from "../../../components/container/Container";
+import styled from "styled-components";
 
-const Projects = () => {
+export const Projects = () => {
 
     const ProjectsState = [{
         id: 1,
@@ -57,7 +58,7 @@ const Projects = () => {
                      key={item.id}/>)
 
     return (
-        <div>
+        <SectionProject>
             <Container width={"1220px"}>
                 <GroupOfHeadingSection heading={"Projects"} description={"Things I’ve built so far"} size={"large"}/>
 
@@ -67,8 +68,11 @@ const Projects = () => {
             </Container>
 
 
-        </div>
+        </SectionProject>
     );
 };
 
-export default Projects;
+
+const SectionProject = styled.section`
+padding: 150px 0;
+`;

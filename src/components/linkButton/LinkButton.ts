@@ -15,6 +15,7 @@ export const LinkButton = styled.a<LinkButtonPropsType>`
     text-align: center;
     background-color: ${theme.colors.primaryText};
     color: #ffffff;
+    white-space:nowrap;
 
     ${props => props.outlined && css<LinkButtonPropsType>`
         background-color: transparent;

@@ -9,7 +9,28 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
+    
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: red white;
+    }
+    
+    *::-webkit-scrollbar {
+        height: 10px;
+    }
+    *::-webkit-scrollbar-track {
+        background-color: #E5E9ED;
+        
+    }
 
+    *::-webkit-scrollbar-track-piece {
+        background-color: #F9F9F9;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color:#E63946;
+        border-radius: 10px;
+    }
 
     body {
         margin: 0;
@@ -18,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        background-color: #FFFFFF;
+        background-color: #FAFAFA;
         line-height: 1.2;
         color: ${theme.colors.primaryText};
     }

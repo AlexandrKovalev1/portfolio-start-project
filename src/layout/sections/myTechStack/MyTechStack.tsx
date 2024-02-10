@@ -46,5 +46,8 @@ export const MyTechStack = () => {
 
 
 const StyledSectionMyStack = styled.section`
+min-height: 860px;
+    display: flex;
+    align-items: center ;
 
 `;
