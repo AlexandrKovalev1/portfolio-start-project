@@ -1,8 +1,9 @@
 import styled, {css} from "styled-components";
+import {theme} from "../../styles/Theme";
 
 
 type ButtonPropsType = {
-    nameOfType: "Get" | "Contact"
+    nameOfType: "Get" | "Contact"|"HireMe"
     height?: string
     width?: string
 };
@@ -12,15 +13,17 @@ export const Button = styled.button<ButtonPropsType>`
     letter-spacing: 0.03em;
     text-align: center;
     border: 2px solid;
-    border-radius: 31px;
+    border-radius: 30px;
     cursor: pointer;
     white-space:nowrap;
 
+    :hover {
+        color: ${theme.colors.accent};
+    }
 
     ${props => props.nameOfType === "Get" && css<ButtonPropsType>`
         width: ${props => props.width || "215px"};
         height: ${props => props.height || "60px"};
-        border-radius: 30px;
         border-color: #9E9E9E;
 
 
@@ -29,8 +32,20 @@ export const Button = styled.button<ButtonPropsType>`
     ${props => props.nameOfType === "Contact" && css<ButtonPropsType>`
         width: ${props => props.width || "186px"};
         height: ${props => props.height || "60px"};
-        border-radius: 30px;
         border-color: #5A5A5A;
+    `};
+
+    ${props => props.nameOfType === "HireMe" && css<ButtonPropsType>`
+        width: ${props => props.width || "206px"};
+        line-height: ${props => props.height || "56px"};
+        background-color: ${theme.colors.primaryText};
+        color: #ffffff;
+        border-radius: unset;
+        
+        :hover {
+            background-color: transparent;
+            color: ${theme.colors.primaryText};
+        }
     `};
     
 

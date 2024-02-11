@@ -60,10 +60,6 @@ export const GlobalStyle = createGlobalStyle`
         background-color: unset;
         border: none;
         
-        &:hover {
-            color: ${theme.colors.accent};
-            border-color: ${theme.colors.accent};
-        }
     }
     
 `;
