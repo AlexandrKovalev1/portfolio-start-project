@@ -9,7 +9,7 @@ type MenuPropsType = {
         id: number,
 
     }>,
-    type: "header" | "burger" | "footer"
+    type: "header" | "burger"
 };
 export const Menu = (props: MenuPropsType) => {
 
@@ -30,39 +30,21 @@ export const Menu = (props: MenuPropsType) => {
 };
 
 type StyledNavPropsType = {
-    type: "header" | "burger" | "footer"
+    type: "header" | "burger"
 };
 
 const StyledNav = styled.nav<StyledNavPropsType>`
     ul {
         display: flex;
+        align-items: center;
+        gap: 54px;
     };
-
-    ${props => props.type === "header" && css<StyledNavPropsType>`
-        ul {
-            gap: 54px;
-        };
-
-    `};
 
     ${props => props.type === "burger" && css<StyledNavPropsType>`
         ul {
             flex-direction: column;
-            align-items: center;
             gap:20px;
         };
-
-
-        @media (max-height: 650px) {
-            ul{
-                flex-shrink: 10;
-            }
-        }
     
     `};
-
-    ${props => props.type === "footer" && css<StyledNavPropsType>``};
-
-
-
 `;

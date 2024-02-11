@@ -22,7 +22,7 @@ export const Header = (props: HeaderPropsType) => {
                         <Menu menuState={navMenuHeaderState} type={"header"}/>
                         <ContactsGroup menuState={menuContactsState} type={"header"}/>
                     </StyledNavigationBlock>
-                    <BurgerMenu/>
+                    {/*<BurgerMenu/>*/}
                 </FlexContainer>
             </Container>
 
@@ -46,7 +46,6 @@ const StyledNavigationBlock = styled.div`
     display: flex;
     align-items: center;
     gap: 54px;
-    z-index: 101;
 
     @media (max-width: 990px) {
         nav {

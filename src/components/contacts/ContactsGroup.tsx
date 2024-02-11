@@ -6,6 +6,7 @@ import {ContactListItem} from "./contactListItem/ContactListItem";
 type ContactsGroupPropsType = {
     menuState: Array<{
         iconId: string,
+        href:string
         viewBox: string,
         id: number
     }>,
@@ -19,6 +20,7 @@ export const ContactsGroup = (props: ContactsGroupPropsType) => {
         <ContactListItem
             iconId={item.iconId}
             viewBox={item.viewBox}
+            href={item.href}
             key={item.id}
         />);
 
@@ -36,25 +38,11 @@ type ContactsGroupWrapperPropsType = {
 }
 
 const ContactsGroupWrapper = styled.div<ContactsGroupWrapperPropsType>`
-
-    svg {
-        fill: #575757;
-    }
-;
-
     ul {
         display: flex;
         gap: 20px;
-    }
-
-    li:hover svg{
-        fill:#E63946
-    }
-;
-
-    ${props => props.type === "header" && css<ContactsGroupWrapperPropsType>`
-
-    `};
+    };
+    
 
     ${props => props.type === "burger" && css<ContactsGroupWrapperPropsType>`
         ul {
@@ -67,11 +55,6 @@ const ContactsGroupWrapper = styled.div<ContactsGroupWrapperPropsType>`
         svg {
             width: 17px;
         }
-        
-  
     `};
-
-
-
-
+    
 `;

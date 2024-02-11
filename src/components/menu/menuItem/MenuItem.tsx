@@ -17,11 +17,7 @@ export const MenuItem = (props: MenuItemPropsType) => {
 
 
 
-const ListItem = styled.li`
-    position: relative;
-
-
-`;
+const ListItem = styled.li``;
 
 const Link = styled.a`
     color: ${theme.colors.primaryText};

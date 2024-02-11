@@ -25,12 +25,12 @@ function App() {
 
 
 const AppWrapperStyled = styled.div`
-    display: flex;
-    flex-direction: column;
-    //max-width: 1920px;
-    //width: 100%;
-    //margin: 0 auto;
-    //overflow: hidden;
+
+    section {
+        display: flex;
+        align-items: center;
+        padding: 150px 0;
+    }
 `
 
 export default App;
