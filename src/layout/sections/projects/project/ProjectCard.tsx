@@ -17,6 +17,7 @@ export const ProjectCard = (props: ProjectCardPropsType) => {
 
     return (
         <StyledProjectWrapper>
+
             <StyledImg src={props.cover}/>
             <ProjectContent heading={props.heading}
                             description={props.description}
@@ -51,5 +52,4 @@ const StyledLinksContainer = styled.div`
     display: flex;
     gap: 48px;
     padding: 28px;
-    line-height: 26px;
-`
+`;

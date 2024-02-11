@@ -74,5 +74,4 @@ export const Projects = () => {
 
 
 const SectionProject = styled.section`
-padding: 150px 0;
 `;

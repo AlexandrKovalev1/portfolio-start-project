@@ -19,13 +19,12 @@ export const CustomLink = (props: CustomLinkPropsType) => {
         viewBox = "-2 -2 90 90";
         headingLink = "View Code";
     }
-    ;
 
 
     return (
         <StyledLink href={props.href}>
             <Icon iconId={linkId} width={"20px"} height={"20px"} viewBox={viewBox}/>
-            <span>{headingLink}</span>
+            {headingLink}
         </StyledLink>
     );
 };
