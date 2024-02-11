@@ -60,7 +60,7 @@ export const Projects = () => {
     return (
         <SectionProject>
             <Container width={"1220px"}>
-                <GroupOfHeadingSection heading={"Projects"} description={"Things I’ve built so far"} size={"large"}/>
+                <GroupOfHeadingSection heading={"Projects"} description={"Things I’ve built so far"}/>
 
                 <FlexContainer gap={"62px 34px"} wrap={"wrap"} justify={"center"}>
                     {ProjectsItems}

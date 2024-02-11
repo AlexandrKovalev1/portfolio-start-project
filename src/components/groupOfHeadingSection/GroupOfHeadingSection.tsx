@@ -5,55 +5,37 @@ import styled, {css} from "styled-components";
 type GroupOfHeadingSectionPropsType = {
     heading: string,
     description: string,
-    size: "large" | "medium" | "mobile",
+
 }
 export const GroupOfHeadingSection = (props: GroupOfHeadingSectionPropsType) => {
 
     return (
-        <StyledHeadingGroupWrapper size={props.size}>
-            <h2>{props.heading}</h2>
-            <span>{props.description}</span>
+        <StyledHeadingGroupWrapper >
+            <Title>{props.heading}</Title>
+            <Description>{props.description}</Description>
         </StyledHeadingGroupWrapper>
     );
 };
 
-type StyledHeadingGroupWrapperPropsType = {
-    size: "large" | "medium" | "mobile"
-};
 
-const StyledHeadingGroupWrapper = styled.div<StyledHeadingGroupWrapperPropsType>`
+const StyledHeadingGroupWrapper = styled.div`
     display: flex;
     flex-direction: column;
-
-    ${props => props.size === "large" && css<StyledHeadingGroupWrapperPropsType>`
-        align-items: center;
-
-        h2 {
-            font-size: 48px;
-            font-weight: 700;
-        }
-
-        span {
-            margin:15px 0 60px;
-            font-size: 32px;
-            font-weight: 400;
-            text-align: center;
-        }
-
-    `};
-
-    ${props => props.size === "medium" && css<StyledHeadingGroupWrapperPropsType>`
-        h2 {
-            font-size: 42px;
-        }
-
-        span {
-            margin:31px 0 198px;
-            font-size: 20px;
-        }
-
-    `}
+    align-items: center;
+    text-align: center;
 
 
-`
+`;
 
+
+const Title = styled.h2`
+    font-size: 48px;
+    font-weight: 700;
+`;
+
+const Description = styled.span`
+    margin: 15px 0 60px;
+    font-size: 32px;
+    font-weight: 400;
+
+`;

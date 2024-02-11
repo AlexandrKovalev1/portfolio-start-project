@@ -35,7 +35,7 @@ export const MyTechStack = () => {
             <Container width={"1220px"}>
                 <GroupOfHeadingSection
                     heading={"My Tech Stack"}
-                    description={"Technologies I’ve been working with recently"} size={"large"}/>
+                    description={"Technologies I’ve been working with recently"} />
                 <FlexContainer gap={"95px"} wrap={"wrap"} justify={"center"}>
                     {MyStacks}
                 </FlexContainer>
