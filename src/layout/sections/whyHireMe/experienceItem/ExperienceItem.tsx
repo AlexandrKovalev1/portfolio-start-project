@@ -13,12 +13,12 @@ type ExperienceItemPropsType = {
 };
 export const ExperienceItem = (props: ExperienceItemPropsType) => {
 
-    const dateTo = props.dataTo ? props.dataTo : "until now";
+    const dateTo = props.dataTo ? props.dataTo : "Until now";
 
     return (
         <ExperienceWrapper>
             <ExperienceGroup>
-                <h3>{props.position}</h3>
+                <ExperienceHeading>{props.position}</ExperienceHeading>
                 <CompanyInfoBlock>
                     <InfoItem IconId={"company"} text={props.companyName}/>
                     <InfoItem IconId={"location"} text={props.location}/>
@@ -41,9 +41,9 @@ const ExperienceWrapper = styled.div`
     align-items: flex-start;
     min-height: 75px;
     width: 100%;
-    
+
     :before {
-        position:absolute;
+        position: absolute;
         bottom: 0;
         left: 0;
         content: "";
@@ -56,18 +56,23 @@ const ExperienceGroup = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
-    &+& {
+
+    & + & {
         flex-shrink: 0;
         align-items: flex-end;
     }
 `;
 
+const ExperienceHeading = styled.h3`
+    font-size: 20px;
+    font-weight: 400;
+`;
+
 const CompanyInfoBlock = styled.div`
-display: flex;
+    display: flex;
     justify-content: space-between;
     min-width: 200px;
-    
+
 `;
 
 const StyledEmployment = styled.span`

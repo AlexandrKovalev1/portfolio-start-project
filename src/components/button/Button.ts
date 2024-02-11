@@ -4,10 +4,12 @@ import {theme} from "../../styles/Theme";
 
 type ButtonPropsType = {
     nameOfType: "Get" | "Contact"|"HireMe"
-    height?: string
-    width?: string
+    height: string
+    width: string
 };
 export const Button = styled.button<ButtonPropsType>`
+    width: ${props => props.width} ;
+    height: ${props => props.height };
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.03em;
@@ -22,22 +24,14 @@ export const Button = styled.button<ButtonPropsType>`
     }
 
     ${props => props.nameOfType === "Get" && css<ButtonPropsType>`
-        width: ${props => props.width || "215px"};
-        height: ${props => props.height || "60px"};
         border-color: #9E9E9E;
-
-
     `};
 
     ${props => props.nameOfType === "Contact" && css<ButtonPropsType>`
-        width: ${props => props.width || "186px"};
-        height: ${props => props.height || "60px"};
         border-color: #5A5A5A;
     `};
 
     ${props => props.nameOfType === "HireMe" && css<ButtonPropsType>`
-        width: ${props => props.width || "206px"};
-        line-height: ${props => props.height || "56px"};
         background-color: ${theme.colors.primaryText};
         color: #ffffff;
         border-radius: unset;

@@ -20,7 +20,7 @@ export const WhyHireMe = () => {
                         </StyledPartitionText>
 
                         <StyledButtonsGroup>
-                            <LinkButton href={""} width={"138px"} height={"56px"}>Hire Me</LinkButton>
+                            <Button nameOfType={"HireMe"} width={"206px"} height={"56px"}>Hire Me</Button>
                             <LinkButton outlined href={"#"} width={"206px"} height={"56px"} download>Download
                                 CV</LinkButton>
                         </StyledButtonsGroup>
@@ -45,10 +45,14 @@ export const WhyHireMe = () => {
 
 
 const StyledSectionWhy = styled.section`
-    min-height: 630px;
-    display: flex;
-    align-items: center;
     background-color: #E5E9ED;
+
+${FlexContainer} {
+    @media (max-width: 950px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 `;
 
 
@@ -63,9 +67,16 @@ const StyledPartitionWrapper = styled.div`
 
 `;
 
-const StyledPartitionHeading = styled.h2``;
+const StyledPartitionHeading = styled.h2`
+    font-size: 48px;
+    font-weight: 700;
+`;
 
-const StyledPartitionText = styled.p``;
+const StyledPartitionText = styled.p`
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+`;
 
 const StyledButtonsGroup = styled.div`
     display: flex;
