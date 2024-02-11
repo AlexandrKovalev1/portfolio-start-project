@@ -19,8 +19,9 @@ export const Button = styled.button<ButtonPropsType>`
     cursor: pointer;
     white-space:nowrap;
 
-    :hover {
-        color: ${theme.colors.accent};
+    :hover,:focus {
+        background-color: ${theme.colors.primaryText};
+        color: #ffffff;
     }
 
     ${props => props.nameOfType === "Get" && css<ButtonPropsType>`
@@ -32,13 +33,12 @@ export const Button = styled.button<ButtonPropsType>`
     `};
 
     ${props => props.nameOfType === "HireMe" && css<ButtonPropsType>`
-        background-color: ${theme.colors.primaryText};
-        color: #ffffff;
+        border: 2px solid #E1E1E1;
         border-radius: unset;
         
-        :hover {
-            background-color: transparent;
-            color: ${theme.colors.primaryText};
+        :hover,:focus {
+            background-color: ${theme.colors.primaryText};
+            color: #ffffff;
         }
     `};
     

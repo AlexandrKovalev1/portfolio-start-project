@@ -3,8 +3,8 @@ import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {Menu} from "../../components/menu/Menu";
 import {ContactsGroup} from "../../components/contacts/ContactsGroup";
-import {BurgerMenu} from "./burgerMenu/BurgerMenu";
-import {menuContactsState, navMenuHeaderState} from "../../state.js";
+// import {BurgerMenu} from "./burgerMenu/BurgerMenu";
+import {menuContactsState, navMenuHeaderState} from "../../state";
 import {Container} from "../../components/container/Container";
 import {FlexContainer} from "../../components/FlexContainer";
 

@@ -20,7 +20,7 @@ export const WhyHireMe = () => {
                         </StyledPartitionText>
 
                         <StyledButtonsGroup>
-                            <Button nameOfType={"HireMe"} width={"206px"} height={"56px"}>Hire Me</Button>
+                            <Button nameOfType={"HireMe"} width={"206px"} height={"56px"} autoFocus>Hire Me</Button>
                             <LinkButton outlined href={"#"} width={"206px"} height={"56px"} download>Download
                                 CV</LinkButton>
                         </StyledButtonsGroup>
