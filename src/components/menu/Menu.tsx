@@ -43,7 +43,10 @@ const StyledNav = styled.nav<StyledNavPropsType>`
     ${props => props.type === "burger" && css<StyledNavPropsType>`
         ul {
             flex-direction: column;
+            justify-content: center;
             gap:20px;
+            font-size: calc( (100vw - 360px)/(992 - 360) * (60 - 30) + 30px);
+      
         };
     
     `};

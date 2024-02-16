@@ -38,6 +38,8 @@ export const Main = () => {
 
 
 const StyledMain = styled.main`
+    max-height: 100vh;
+    overflow: hidden;
     background-color: #F9F9F9;
     background-image: url(${elipse}),
     url(${elipse}),
@@ -50,12 +52,12 @@ const StyledMain = styled.main`
     url(${plus1}),
     url(${plus2});
 
-    background-position: bottom -60% right 120%,
-    top 100% right 13%,
-    right -30% top -120%,
-    center left 60%,
+    background-position: bottom -163px left -271px,
+    top 44vh left 52vw,
+    right -30% top -322px,
+    center left 53%,
     top 80% left 95%,
-    top 85% left 60%,
+    top 85% left 41%,
     top 40% left 93%,
     top 35% left 55%,
     left 10% top 60%,
@@ -77,10 +79,10 @@ const StyledHeading = styled.h1`
 `;
 
 const StyledSpan = styled.span<{ accent?: boolean }>`
+    font-size: calc( (100vw - 360px)/(1920 - 360) * (70 - 36) + 36px);
 
-    font-size: 80px;
     font-weight: 700;
-    line-height: 80px;
+    line-height: 70px;
     letter-spacing: -0.05em;
     white-space: nowrap;
 
@@ -103,8 +105,8 @@ const StyledTextAbout = styled.p`
 `;
 
 const StyledPhoto = styled.img`
-    width: 100%;
-    max-width: 830px;
-    //transform: translate(150px);
+    height: 100vh;
+    transform: translateX(-200px);
+
 
 `;

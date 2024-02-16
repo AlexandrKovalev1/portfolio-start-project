@@ -3,10 +3,11 @@ import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {Menu} from "../../components/menu/Menu";
 import {ContactsGroup} from "../../components/contacts/ContactsGroup";
-// import {BurgerMenu} from "./burgerMenu/BurgerMenu";
 import {menuContactsState, navMenuHeaderState} from "../../state";
 import {Container} from "../../components/container/Container";
 import {FlexContainer} from "../../components/FlexContainer";
+import {theme} from "../../styles/Theme";
+import {BurgerMenu} from "./burgerMenu/BurgerMenu";
 
 type HeaderPropsType = {};
 
@@ -22,7 +23,7 @@ export const Header = (props: HeaderPropsType) => {
                         <Menu menuState={navMenuHeaderState} type={"header"}/>
                         <ContactsGroup menuState={menuContactsState} type={"header"}/>
                     </StyledNavigationBlock>
-                    {/*<BurgerMenu/>*/}
+                    <BurgerMenu/>
                 </FlexContainer>
             </Container>
 
@@ -47,15 +48,9 @@ const StyledNavigationBlock = styled.div`
     align-items: center;
     gap: 54px;
 
-    @media (max-width: 990px) {
-        nav {
-            display: none;
-        }
-
-        div {
-            display: none;
-        }
-    }
+    @media ${theme.media.largeDesc} {
+        display: none;
+    };
 
 `;
 
