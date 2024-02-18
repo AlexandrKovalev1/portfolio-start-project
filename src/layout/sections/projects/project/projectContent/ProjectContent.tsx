@@ -58,4 +58,10 @@ const StyledProjectDescription = styled.p<{ full: boolean }>`
 
 const StyledTechStackWrapper = styled.div`
     display: flex;
+    h4 {
+        white-space: nowrap;
+    }
+    
+    
+
 `;

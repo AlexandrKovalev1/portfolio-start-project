@@ -40,8 +40,6 @@ const StyledProjectWrapper = styled.div`
     height: min-content;
     border-radius: 20px;
     box-shadow: 2px 2px 100px 0 #00000033;
-    overflow: hidden;
-
 `;
 
 const StyledImg = styled.img`

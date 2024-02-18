@@ -1,10 +1,11 @@
 import React from "react";
 import {GroupOfHeadingSection} from "../../../components/groupOfHeadingSection/GroupOfHeadingSection";
-import {FlexContainer} from "../../../components/FlexContainer";
 import {ProjectCard} from "./project/ProjectCard";
 import coverImg from "../../../assets/images/projectCardCover.jpg";
 import {Container} from "../../../components/container/Container";
 import styled from "styled-components";
+import {theme} from "../../../styles/Theme";
+
 
 export const Projects = () => {
 
@@ -61,16 +62,22 @@ export const Projects = () => {
         <SectionProject>
             <Container width={"1220px"}>
                 <GroupOfHeadingSection heading={"Projects"} description={"Things I’ve built so far"}/>
-
-                <FlexContainer gap={"62px 34px"} wrap={"wrap"} justify={"center"}>
+                <GridBox>
                     {ProjectsItems}
-                </FlexContainer>
+                </GridBox>
             </Container>
-
-
         </SectionProject>
     );
 };
+
+const GridBox = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(344px,auto));
+    grid-auto-rows: auto;
+    justify-content: center;
+    gap: 62px 34px;
+    
+`;
 
 
 const SectionProject = styled.section`
