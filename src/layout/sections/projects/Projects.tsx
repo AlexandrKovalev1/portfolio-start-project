@@ -4,7 +4,6 @@ import {ProjectCard} from "./project/ProjectCard";
 import coverImg from "../../../assets/images/projectCardCover.jpg";
 import {Container} from "../../../components/container/Container";
 import styled from "styled-components";
-import {theme} from "../../../styles/Theme";
 
 
 export const Projects = () => {

@@ -29,7 +29,7 @@ const StyledHeadingGroupWrapper = styled.div`
 
 
 const Title = styled.h2`
-    font-size: 48px;
+    font-size: calc( (100vw - 360px)/(1920 - 360) * (48 - 40) + 40px);
     font-weight: 700;
 `;
 

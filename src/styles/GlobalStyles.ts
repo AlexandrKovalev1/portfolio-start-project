@@ -33,6 +33,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        min-width: 375px;
         margin: 0;
         font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

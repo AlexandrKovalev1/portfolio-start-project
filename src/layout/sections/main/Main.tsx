@@ -62,7 +62,7 @@ const StyledMain = styled.main`
     top 85% left 41%,
     top 40% left 93%,
     top 35% left 55%,
-    left 10% top 60%,
+    left 9.8% top 60%,
     left calc(10% - 5px) top 60%;
 
     background-repeat: no-repeat;
@@ -78,10 +78,10 @@ const StyledMain = styled.main`
         top 94% left 38%,
         top 40% left 47%,
         top 23% left 14%,
-        left 10% top 60%,
+        left 9.8% top 60%,
         left calc(10% - 5px) top 60%;
 
-        background-size: 50vw, 50vw, 50vw, 16px, 16px, 16px, 16px, 16px, 16px, 16px;
+        background-size: 50vw, 50vw, 50vw, 16px, 16px, 16px, 16px, 16px, 8px,16px, 16px;
     };
 
     @media${theme.media.tablet} {
@@ -93,10 +93,10 @@ const StyledMain = styled.main`
         top 85% left 38%,
         top 40% left 47%,
         top 23% left 14%,
-        left 10% top 60%,
+        left 9.8% top 60%,
         left calc(10% - 5px) top 60%;
 
-        background-size: 36vw, 36vw, 36vw, 16px, 16px, 16px, 16px, 16px, 16px, 16px;
+        background-size: 36vw, 36vw, 36vw, 16px, 16px, 16px, 16px, 16px,8px,16px, 16px;
     };
 
     @media${theme.media.mobile} {
@@ -109,7 +109,7 @@ const StyledMain = styled.main`
         top 40% left 41%,
         top 23% left 14%;
 
-        background-size: 49vw, 49vw, 49vw, 16px, 16px, 16px, 16px, 16px, 16px, 16px;
+        background-size: 49vw, 49vw, 49vw, 16px, 16px, 16px, 16px, 16px, 8px,16px, 16px;
     };
 
 `;
@@ -189,6 +189,7 @@ const StyledSpan = styled.span<{ accent?: boolean }>`
 
         @media${theme.media.tablet} {
             white-space: pre-wrap;
+            line-height: 30px;
         }
     `}
 

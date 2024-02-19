@@ -40,6 +40,11 @@ export const Button = styled.button<ButtonPropsType>`
             background-color: ${theme.colors.primaryText};
             color: #ffffff;
         }
+
+        @media${theme.media.mobile} {
+            width: calc(${props => props.width} * 0.7);
+            line-height: calc(${props => props.height} * 0.8);
+        };
     `};
     
 

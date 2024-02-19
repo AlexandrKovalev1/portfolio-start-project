@@ -5,6 +5,7 @@ import {Container} from "../../../components/container/Container";
 import {Button} from "../../../components/button/Button";
 import {LinkButton} from "../../../components/linkButton/LinkButton";
 import {ExperienceItem} from "./experienceItem/ExperienceItem";
+import {theme} from "../../../styles/Theme";
 
 export const WhyHireMe = () => {
     return (
@@ -21,7 +22,7 @@ export const WhyHireMe = () => {
 
                         <StyledButtonsGroup>
                             <Button nameOfType={"HireMe"} width={"206px"} height={"56px"} autoFocus>Hire Me</Button>
-                            <LinkButton outlined href={"#"} width={"206px"} height={"56px"} download>Download
+                            <LinkButton type={"outlined"} href={"#"} width={"206px"} height={"56px"} download>Download
                                 CV</LinkButton>
                         </StyledButtonsGroup>
                     </StyledPartitionWrapper>
@@ -68,8 +69,13 @@ const StyledPartitionWrapper = styled.div`
 `;
 
 const StyledPartitionHeading = styled.h2`
-    font-size: 48px;
+    font-size: calc( (100vw - 360px)/(1920 - 360) * (48 - 40) + 40px);
+    width: 100%;
     font-weight: 700;
+    
+    @media${theme.media.largeDesc} {
+        text-align: center;
+    }
 `;
 
 const StyledPartitionText = styled.p`
@@ -80,5 +86,12 @@ const StyledPartitionText = styled.p`
 
 const StyledButtonsGroup = styled.div`
     display: flex;
+    width: 100%;
     gap: 25px;
+
+    @media${theme.media.largeDesc} {
+        justify-content: center;
+        align-items: center;
+    }
+    
 `;

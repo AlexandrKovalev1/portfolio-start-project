@@ -1,6 +1,7 @@
 import React from 'react';
 import {Icon} from "../../../../components/icon/Icon";
 import styled from "styled-components";
+import {theme} from "../../../../styles/Theme";
 
 type ExperienceItemPropsType = {
     position: string
@@ -72,6 +73,10 @@ const CompanyInfoBlock = styled.div`
     display: flex;
     justify-content: space-between;
     min-width: 200px;
+    
+    @media${theme.media.mobile} {
+        min-width: 160px;
+    }
 
 `;
 

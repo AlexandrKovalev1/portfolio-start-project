@@ -4,7 +4,7 @@ import {theme} from "../../styles/Theme";
 type LinkButtonPropsType = {
     width: string
     height: string
-    outlined?: boolean
+    type?: "outlined" | "viewProject"
 }
 export const LinkButton = styled.a<LinkButtonPropsType>`
     display: inline-block;
@@ -15,17 +15,35 @@ export const LinkButton = styled.a<LinkButtonPropsType>`
     text-align: center;
     background-color: ${theme.colors.primaryText};
     color: #ffffff;
-    white-space:nowrap;
+    white-space: nowrap;
+    cursor: pointer;
+    
+    @media${theme.media.mobile} {
+        width: calc(${props => props.width} * 0.7);
+        line-height: calc(${props => props.height} * 0.8);
+    }
+    
 
-    ${props => props.outlined && css<LinkButtonPropsType>`
+    ${props => props.type==="outlined" && css<LinkButtonPropsType>`
         background-color: transparent;
         border: 2px solid #E1E1E1;
         color: ${theme.colors.primaryText};
+
+        :hover {
+            background-color: ${theme.colors.accent};
+            color: #ffffff;
+        }
+    `};
+    
+    ${props => props.type==="viewProject" && css<LinkButtonPropsType>`
+        font-size: 22px;
+        border-radius: 30px;
+        
+        :hover {
+            color: #ffffff;
+            outline: 3px solid white;
+        }
     `}
 
-    :hover{
-        background-color: ${theme.colors.accent};
-        color:#ffffff;
-    }
 `;
 
