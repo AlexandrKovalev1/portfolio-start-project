@@ -1,26 +1,18 @@
 import React from "react";
-import styled from "styled-components";
-import {theme} from "../../../styles/Theme";
+import {Styles} from "./MenuItem_Styles";
 
 type MenuItemPropsType = {
     itemHeading: string
     link: string
 }
-export const MenuItem = (props: MenuItemPropsType) => {
+export const MenuItem:React.FC<MenuItemPropsType> = ({link,itemHeading}) => {
     return (
-        <ListItem>
-            <Link href={props.link}>{props.itemHeading}</Link>
-        </ListItem>
+        <li>
+            <Styles.Link href={link}>{itemHeading}</Styles.Link>
+        </li>
     );
 };
 
 
 
 
-const ListItem = styled.li``;
-
-const Link = styled.a`
-    color: ${theme.colors.primaryText};
-    font-size: 16px;
-    font-weight: 700;
-`;

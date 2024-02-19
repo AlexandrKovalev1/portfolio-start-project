@@ -1,14 +1,11 @@
 import React from "react";
 import {Icon} from "../icon/Icon";
-import styled from "styled-components";
+import {Styles} from "./Logo_Styles";
 
-export const Logo = () => {
+export const Logo:React.FC = () => {
     return (
-        <Link href="#">
+        <Styles.Link href="#">
           <Icon iconId={"logo"} width={"250"} height={"100"} viewBox={"5 -5 310 90"} />
-        </Link>
+        </Styles.Link>
     );
 };
-
-const Link = styled.a``;
-

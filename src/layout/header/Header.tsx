@@ -1,57 +1,35 @@
 import React from 'react';
-import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {Menu} from "../../components/menu/Menu";
 import {ContactsGroup} from "../../components/contacts/ContactsGroup";
 import {menuContactsState, navMenuHeaderState} from "../../state";
 import {Container} from "../../components/container/Container";
 import {FlexContainer} from "../../components/FlexContainer";
-import {theme} from "../../styles/Theme";
 import {BurgerMenu} from "./burgerMenu/BurgerMenu";
+import {Styles} from "./Header_Styles";
 
 type HeaderPropsType = {};
 
-export const Header = (props: HeaderPropsType) => {
+export const Header:React.FC<HeaderPropsType> = () => {
 
 
     return (
-        <StyledHeader>
+        <Styles.StyledHeader>
             <Container width={"1220px"}>
                 <FlexContainer align={"center"} justify={"space-between"}>
                     <Logo/>
-                    <StyledNavigationBlock>
+                    <Styles.StyledNavigationBlock>
                         <Menu menuState={navMenuHeaderState} type={"header"}/>
                         <ContactsGroup menuState={menuContactsState} type={"header"}/>
-                    </StyledNavigationBlock>
+                    </Styles.StyledNavigationBlock>
                     <BurgerMenu/>
                 </FlexContainer>
             </Container>
 
-        </StyledHeader>
+        </Styles.StyledHeader>
     );
 };
 
-const StyledHeader = styled.header`
-    position: fixed;
-    top:0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    height: 130px;
-    border-bottom: 1px solid #0000001A;
-    background-color: #F9F9F980;
-    z-index: 999999;
-`;
 
-const StyledNavigationBlock = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 54px;
-
-    @media ${theme.media.largeDesc} {
-        display: none;
-    };
-
-`;
 
 

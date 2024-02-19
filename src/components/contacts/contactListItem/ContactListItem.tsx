@@ -1,7 +1,6 @@
 import React from "react";
 import {Icon} from "../../icon/Icon";
-import styled from "styled-components";
-import {theme} from "../../../styles/Theme";
+import {Styles} from "./ContactListItem_Styles";
 
 
 type ContactListItemPropsType = {
@@ -9,29 +8,17 @@ type ContactListItemPropsType = {
     viewBox:string,
     href:string
 }
-export const ContactListItem = (props:ContactListItemPropsType) => {
+export const ContactListItem:React.FC<ContactListItemPropsType> = ({href,iconId,viewBox}) => {
 
 
 
     return (
-        <ListItem>
-            <Link href={props.href}>
-                <Icon iconId={props.iconId} width={"30"} height={"30"} viewBox={props.viewBox}/>
-            </Link>
-        </ListItem>
+        <Styles.ListItem>
+            <Styles.Link href={href}>
+                <Icon iconId={iconId} width={"30"} height={"30"} viewBox={viewBox}/>
+            </Styles.Link>
+        </Styles.ListItem>
     );
 };
 
-const ListItem = styled.li`
 
-    :hover svg {
-        fill: ${theme.colors.accent};
-    };
-`;
-
-const Link = styled.a`
-    
-    svg {
-        fill: ${theme.colors.primaryText};
-    };
-`;
