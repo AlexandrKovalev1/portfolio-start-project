@@ -1,6 +1,6 @@
 import React from "react";
 import {GroupOfHeadingSection} from "../../../components/groupOfHeadingSection/GroupOfHeadingSection";
-import {FlexContainer} from "../../../components/FlexContainer";
+import {FlexContainer} from "../../../components/flexContainer/FlexContainer";
 import {Icon} from "../../../components/icon/Icon";
 import styled from "styled-components";
 import {Container} from "../../../components/container/Container";

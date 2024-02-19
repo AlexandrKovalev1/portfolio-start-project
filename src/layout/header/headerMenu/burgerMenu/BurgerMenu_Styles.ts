@@ -1,34 +1,11 @@
-import React, {useState} from 'react';
-
 import styled, {css} from "styled-components";
-import {BurgerMenuBody} from "./burgerMenuBody/BurgerMenuBody";
-import {theme} from "../../../styles/Theme";
+import {theme} from "../../../../styles/Theme";
+import {FlexContainer} from "../../../../components/flexContainer/FlexContainer";
 
-export const BurgerMenu = () => {
-
-    const [isOpen, setOpen] = useState(false);
-
-    return (
-        <StyledBurgerMenuWrapper>
-            <StyledBurgerButton isOpen={isOpen} onClick={() => {
-                setOpen(!isOpen)
-            }}>
-                <span></span>
-            </StyledBurgerButton>
-            <BurgerMenuBody isOpen={isOpen}/>
-        </StyledBurgerMenuWrapper>
-    );
-};
-
-const StyledBurgerMenuWrapper = styled.div`
-    display: none;
-    
-    @media ${theme.media.largeDesc} {
-        display: block;
-    };
+const BurgerMenuWrapper = styled.div`
 `;
 
-const StyledBurgerButton = styled.button<{ isOpen: boolean }>`
+const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: fixed;
     top: -140px;
     right: -290px;
@@ -100,3 +77,32 @@ const StyledBurgerButton = styled.button<{ isOpen: boolean }>`
 
     `}
 `;
+
+const MenuBody = styled.div<{ isOpen: boolean }>`
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999999;
+    background-color: #E5E9ED;
+
+    ${props => props.isOpen && css`
+        display: block;
+    `};
+
+    @media screen and (max-height: 650px) and (orientation: landscape) {
+        ${FlexContainer} {
+            gap: 0;
+        }
+    }
+`;
+
+export const Styles = {
+    BurgerButton,
+    BurgerMenuWrapper,
+    MenuBody,
+};

@@ -1,10 +1,16 @@
 import React from 'react';
 import styled from "styled-components";
 import {ContactsGroup} from "../../components/contacts/ContactsGroup";
-import {menuContactsState} from "../../state";
 import {Container} from "../../components/container/Container";
 
 export const Footer = () => {
+    const menuContactsState = [
+        {iconId: "iconGithub", viewBox: "0 0 88 88", href:"#", id: 1},
+        {iconId: "instagram", viewBox: "0 0 32 32", href:"#", id: 2},
+        {iconId: "telegram", viewBox: "0 0 32 35", href:"#", id: 3},
+        {iconId: "whatsapp", viewBox: "0 0 32 32", href:"#", id: 4}
+    ];
+
     return (
         <StyledFooter>
             <Container width={"1274px"}>

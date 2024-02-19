@@ -2,7 +2,7 @@ import React from 'react';
 import {GroupOfHeadingSection} from "../../../components/groupOfHeadingSection/GroupOfHeadingSection";
 import styled from "styled-components";
 import {Button} from "../../../components/button/Button";
-import {FlexContainer} from "../../../components/FlexContainer";
+import {FlexContainer} from "../../../components/flexContainer/FlexContainer";
 import {Container} from "../../../components/container/Container";
 
 

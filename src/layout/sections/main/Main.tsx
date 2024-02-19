@@ -111,6 +111,7 @@ const StyledMain = styled.main`
 
         background-size: 49vw, 49vw, 49vw, 16px, 16px, 16px, 16px, 16px, 8px,16px, 16px;
     };
+    
 
 `;
 
@@ -166,6 +167,7 @@ const DescriptionBlock = styled.div`
         grid-area: 3/1/4/2;
 
     };
+    
 `;
 
 
@@ -190,7 +192,7 @@ const StyledSpan = styled.span<{ accent?: boolean }>`
         @media${theme.media.tablet} {
             white-space: pre-wrap;
             line-height: 30px;
-        }
+        };
     `}
 
 
@@ -234,5 +236,6 @@ const StyledPhoto = styled.img`
         grid-area: 1/1/2/2;
         transform: translateX(50px);
         justify-self: flex-end;
-    }
+    };
+    
 `;

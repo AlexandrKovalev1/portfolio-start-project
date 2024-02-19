@@ -18,6 +18,8 @@ export const LinkButton = styled.a<LinkButtonPropsType>`
     white-space: nowrap;
     cursor: pointer;
     
+
+    
     @media${theme.media.mobile} {
         width: calc(${props => props.width} * 0.7);
         line-height: calc(${props => props.height} * 0.8);
@@ -30,7 +32,7 @@ export const LinkButton = styled.a<LinkButtonPropsType>`
         color: ${theme.colors.primaryText};
 
         :hover {
-            background-color: ${theme.colors.accent};
+            background-color: ${theme.colors.primaryText};
             color: #ffffff;
         }
     `};

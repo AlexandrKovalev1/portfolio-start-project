@@ -1,6 +1,6 @@
 import React from 'react';
-import styled, {css} from "styled-components";
-import {ContactListItem} from "./contactListItem/ContactListItem";
+import {ContactItem} from "./contactItem/ContactItem";
+import {Styles} from "./ContactsGroup_Styles";
 
 
 type ContactsGroupPropsType = {
@@ -10,14 +10,14 @@ type ContactsGroupPropsType = {
         viewBox: string,
         id: number
     }>,
-    type: "header" | "burger" | "footer",
+    type: "desktop" | "burger"|"footer",
 }
 
 
-export const ContactsGroup = (props: ContactsGroupPropsType) => {
+export const ContactsGroup:React.FC<ContactsGroupPropsType> = ({menuState,type}) => {
 
-    const contactsListItems = props.menuState.map(item =>
-        <ContactListItem
+    const contacts = menuState.map(item =>
+        <ContactItem
             iconId={item.iconId}
             viewBox={item.viewBox}
             href={item.href}
@@ -25,36 +25,11 @@ export const ContactsGroup = (props: ContactsGroupPropsType) => {
         />);
 
     return (
-        <ContactsGroupWrapper type={props.type}>
-            <ul>
-                {contactsListItems}
-            </ul>
-        </ContactsGroupWrapper>
+        <Styles.ContactsGroupWrapper type={type}>
+            <Styles.List>
+                {contacts}
+            </Styles.List>
+        </Styles.ContactsGroupWrapper>
     );
 };
 
-type ContactsGroupWrapperPropsType = {
-    type: "header" | "burger" | "footer",
-}
-
-const ContactsGroupWrapper = styled.div<ContactsGroupWrapperPropsType>`
-    ul {
-        display: flex;
-        gap: 20px;
-    };
-    
-
-    ${props => props.type === "burger" && css<ContactsGroupWrapperPropsType>`
-        ul {
-            justify-content: center;
-            gap: 50px;
-        }
-    `};
-
-    ${props => props.type === "footer" && css<ContactsGroupWrapperPropsType>`
-        svg {
-            width: 17px;
-        }
-    `};
-    
-`;

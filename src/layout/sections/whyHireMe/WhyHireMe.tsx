@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {FlexContainer} from "../../../components/FlexContainer";
+import {FlexContainer} from "../../../components/flexContainer/FlexContainer";
 import {Container} from "../../../components/container/Container";
 import {Button} from "../../../components/button/Button";
 import {LinkButton} from "../../../components/linkButton/LinkButton";
@@ -21,7 +21,7 @@ export const WhyHireMe = () => {
                         </StyledPartitionText>
 
                         <StyledButtonsGroup>
-                            <Button nameOfType={"HireMe"} width={"206px"} height={"56px"} autoFocus>Hire Me</Button>
+                            <Button nameOfType={"HireMe"} width={"206px"} height={"56px"} >Hire Me</Button>
                             <LinkButton type={"outlined"} href={"#"} width={"206px"} height={"56px"} download>Download
                                 CV</LinkButton>
                         </StyledButtonsGroup>
@@ -49,7 +49,7 @@ const StyledSectionWhy = styled.section`
     background-color: #E5E9ED;
 
 ${FlexContainer} {
-    @media (max-width: 950px) {
+    @media${theme.media.largeDesc} {
         flex-wrap: wrap;
         justify-content: center;
     }

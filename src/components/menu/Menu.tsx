@@ -1,53 +1,32 @@
-import React from "react";
-import styled, {css} from "styled-components";
-import {MenuItem} from "./menuItem/MenuItem";
+import React from 'react';
+import {Navigation} from "./navigation/Navigation";
+import {ContactsGroup} from "../contacts/ContactsGroup";
 
 type MenuPropsType = {
-    menuState: Array<{
-        itemHeading: string,
-        link: string,
-        id: number,
+    type:"desktop"|"burger"
+}
+export const Menu:React.FC<MenuPropsType> = ({type}) => {
+    const navMenuHeaderState = [
+        {itemHeading: "Home", link: "", id: 1},
+        {itemHeading: "About", link: "", id: 2},
+        {itemHeading: "Tech Stack", link: "", id: 3},
+        {itemHeading: "Projects", link: "", id: 4},
+        {itemHeading: "Contact", link: "", id: 5}
+    ];
 
-    }>,
-    type: "header" | "burger"
-};
-export const Menu = (props: MenuPropsType) => {
+    const menuContactsState = [
+        {iconId: "iconGithub", viewBox: "0 0 88 88", href:"#", id: 1},
+        {iconId: "instagram", viewBox: "0 0 32 32", href:"#", id: 2},
+        {iconId: "telegram", viewBox: "0 0 32 35", href:"#", id: 3},
+        {iconId: "whatsapp", viewBox: "0 0 32 32", href:"#", id: 4}
+    ];
 
-    const menuItems = props.menuState.map(item =>
-        <MenuItem
-            itemHeading={item.itemHeading}
-            link={item.link}
-            key={item.id}
-        />);
 
     return (
-        <StyledNav type={props.type}>
-            <ul>
-                {menuItems}
-            </ul>
-        </StyledNav>
+        <>
+            <Navigation menuState={navMenuHeaderState} type={type}/>
+            <ContactsGroup menuState={menuContactsState} type={type}/>
+        </>
     );
 };
 
-type StyledNavPropsType = {
-    type: "header" | "burger"
-};
-
-const StyledNav = styled.nav<StyledNavPropsType>`
-    ul {
-        display: flex;
-        align-items: center;
-        gap: 54px;
-    };
-
-    ${props => props.type === "burger" && css<StyledNavPropsType>`
-        ul {
-            flex-direction: column;
-            justify-content: center;
-            gap:20px;
-            font-size: calc( (100vw - 360px)/(992 - 360) * (60 - 30) + 30px);
-      
-        };
-    
-    `};
-`;
