@@ -1,16 +1,16 @@
 import React from "react";
-import styled from "styled-components";
 import {Icon} from "../../../../../components/icon/Icon";
+import {Styles} from "../ProjectCard_Styles";
 
 
 type CustomLinkPropsType = {
     href: string,
     type: "preview" | "code",
 };
-export const CustomLink = (props: CustomLinkPropsType) => {
-    let linkId, viewBox, headingLink = "";
+export const CustomLink:React.FC<CustomLinkPropsType> = ({href,type}) => {
+    let linkId, viewBox, headingLink;
 
-    if (props.type === "preview") {
+    if (type === "preview") {
         linkId = "iconPreview";
         viewBox = "0 0 20 20";
         headingLink = "Live Preview";
@@ -22,21 +22,11 @@ export const CustomLink = (props: CustomLinkPropsType) => {
 
 
     return (
-        <StyledLink href={props.href}>
+        <Styles.Link href={href}>
             <Icon iconId={linkId} width={"20px"} height={"20px"} viewBox={viewBox}/>
             {headingLink}
-        </StyledLink>
+        </Styles.Link>
     );
 };
 
-const StyledLink = styled.a`
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: underline;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
 
-    color: initial;
-`;

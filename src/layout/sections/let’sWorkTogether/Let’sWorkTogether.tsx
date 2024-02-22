@@ -6,7 +6,7 @@ import {FlexContainer} from "../../../components/flexContainer/FlexContainer";
 import {Container} from "../../../components/container/Container";
 
 
-export const LetSWorkTogether = () => {
+export const LetSWorkTogether:React.FC = () => {
     return (
         <StyledSectionLetsWork>
 

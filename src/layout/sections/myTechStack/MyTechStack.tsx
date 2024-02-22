@@ -6,7 +6,7 @@ import styled from "styled-components";
 import {Container} from "../../../components/container/Container";
 
 
-export const MyTechStack = () => {
+export const MyTechStack:React.FC = () => {
 
     const myStackState = [{id: 0, idIcon: "html", width: "120", height: "120", viewBox: "0 0 120 120"},
         {id: 1, idIcon: "css", width: "120", height: "120", viewBox: "0 0 120 120"},
