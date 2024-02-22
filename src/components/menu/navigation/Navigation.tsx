@@ -22,7 +22,7 @@ export const Navigation:React.FC<MenuPropsType> = ({menuState,type}) => {
 
     return (
         <Styles.StyledNav type={type}>
-            <Styles.List>
+            <Styles.List role={"menu"}>
                 {menuItems}
             </Styles.List>
         </Styles.StyledNav>

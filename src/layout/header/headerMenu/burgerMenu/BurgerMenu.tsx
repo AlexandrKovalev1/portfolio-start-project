@@ -7,11 +7,12 @@ export const BurgerMenu:React.FC = () => {
 
     const [isOpen, setOpen] = useState(false);
 
+    let ariaLabel = isOpen?"close":"open burger menu"
     return (
         <Styles.BurgerMenuWrapper>
             <Styles.BurgerButton isOpen={isOpen} onClick={() => {
                 setOpen(!isOpen)
-            }}>
+            }} aria-label={ariaLabel}>
                 <span></span>
             </Styles.BurgerButton>
             <BurgerMenuBody isOpen={isOpen}/>

@@ -26,7 +26,7 @@ export const ContactsGroup:React.FC<ContactsGroupPropsType> = ({menuState,type})
 
     return (
         <Styles.ContactsGroupWrapper type={type}>
-            <Styles.List>
+            <Styles.List >
                 {contacts}
             </Styles.List>
         </Styles.ContactsGroupWrapper>

@@ -7,7 +7,7 @@ type MenuItemPropsType = {
 }
 export const NavigationItem:React.FC<MenuItemPropsType> = ({link,itemHeading}) => {
     return (
-        <li>
+        <li role={"menuitem"} aria-label={`${itemHeading} page`}>
             <Styles.Link href={link}>{itemHeading}</Styles.Link>
         </li>
     );
