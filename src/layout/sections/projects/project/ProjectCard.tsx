@@ -4,7 +4,7 @@ import {ProjectContent} from "./projectContent/ProjectContent";
 import {LinkButton} from "../../../../components/linkButton/LinkButton";
 import {Styles} from "./ProjectCard_Styles";
 
-type ProjectCardPropsType = {
+export type ProjectCardPropsType = {
     cover: string,
     heading: string,
     description?: string,

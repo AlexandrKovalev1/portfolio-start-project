@@ -54,6 +54,7 @@ const TechStackWrapper = styled.div`
 /* Project Card*/
 
 const ProjectWrapper = styled.div`
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     max-width: 375px;
@@ -61,13 +62,12 @@ const ProjectWrapper = styled.div`
     min-height: 570px;
     height: min-content;
     border-radius: 20px;
-    box-shadow: 2px 2px 100px 0 #00000033;
-
-
+    box-shadow: 2px 2px 10px 0 #00000033;
 `;
 
 const Img = styled.img`
     width: 100%;
+    border-radius: 20px 20px 0 0;
 `;
 
 const ImageWrapper = styled.div`

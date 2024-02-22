@@ -142,6 +142,10 @@ const Heading = styled.h1`
     font-size: 18px;
     font-weight: 500;
     color: #B8B8B8;
+    
+    p{
+        display: none;
+    }
 `;
 
 const StyledSpan = styled.span<{ accent?: boolean }>`

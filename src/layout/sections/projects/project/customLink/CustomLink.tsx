@@ -16,7 +16,7 @@ export const CustomLink:React.FC<CustomLinkPropsType> = ({href,type}) => {
         headingLink = "Live Preview";
         ariaLabel="Live preview project";
     } else {
-        linkId = "iconGithub";
+        linkId = "github";
         viewBox = "-2 -2 90 90";
         headingLink = "View Code";
         ariaLabel="View code to github";

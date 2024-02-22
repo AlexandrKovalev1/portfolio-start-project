@@ -3,6 +3,7 @@ import ava from "../../../assets/images/avaPng.png";
 import {Container} from "../../../components/container/Container";
 import {Button} from "../../../components/button/Button";
 import {Styles} from "./Main_Styles";
+import Typewriter from 'typewriter-effect';
 
 
 export const Main:React.FC = () => {
@@ -11,7 +12,14 @@ export const Main:React.FC = () => {
             <Container width={"1220px"}>
                 <Styles.GridBox>
                     <Styles.TitleBlock>
-                        <Styles.Heading>Frontend devoloper</Styles.Heading>
+                        <Styles.Heading><p>Frontend developer</p>
+                            <Typewriter
+                                options={{
+                                    strings: ["Frontend developer"],
+                                    autoStart: true,
+                                    loop: true,
+                                }}
+                            /></Styles.Heading>
                         <Styles.StyledSpan>Hello I’m</Styles.StyledSpan>
                         <Styles.StyledSpan accent>Alexandr Kovalyov</Styles.StyledSpan>
                     </Styles.TitleBlock>

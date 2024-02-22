@@ -1,15 +1,14 @@
 import React from "react";
 import {GroupOfHeadingSection} from "../../../components/groupOfHeadingSection/GroupOfHeadingSection";
-import {ProjectCard} from "./project/ProjectCard";
 import coverImg from "../../../assets/images/projectCardCover.jpg";
 import {Container} from "../../../components/container/Container";
 import styled from "styled-components";
+import {Carousel} from "./carousel/Carousel";
 
 
 export const Projects = () => {
 
     const ProjectsState = [{
-        id: 1,
         cover: coverImg,
         heading: "Project Tile goes here",
         description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -17,7 +16,6 @@ export const Projects = () => {
         links: {preview: "#", code: "#"}
     },
         {
-            id: 2,
             cover: coverImg,
             heading: "Project Tile goes here",
             description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -25,7 +23,6 @@ export const Projects = () => {
             links: {preview: "#", code: "#"}
         },
         {
-            id: 3,
             cover: coverImg,
             heading: "Project Tile goes here",
             description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -33,7 +30,6 @@ export const Projects = () => {
             links: {preview: "#", code: "#"}
         },
         {
-            id: 4,
             cover: coverImg,
             heading: "Project Tile goes here",
             description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -41,7 +37,6 @@ export const Projects = () => {
             links: {preview: "#", code: "#"}
         },
         {
-            id: 5,
             cover: coverImg,
             heading: "Project Tile goes here",
             description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -49,21 +44,16 @@ export const Projects = () => {
             links: {preview: "#", code: "#"}
         }];
 
-    const ProjectsItems = ProjectsState.map(item =>
-        <ProjectCard cover={item.cover}
-                     heading={item.heading}
-                     description={item.description}
-                     stack={item.stack}
-                     links={item.links}
-                     key={item.id}/>)
+
+//         <GridBox>
+//         {ProjectsItems}
+// </GridBox>
 
     return (
         <SectionProject>
             <Container width={"1220px"}>
                 <GroupOfHeadingSection heading={"Projects"} description={"Things I’ve built so far"}/>
-                <GridBox>
-                    {ProjectsItems}
-                </GridBox>
+                <Carousel projects={ProjectsState}/>
             </Container>
         </SectionProject>
     );
@@ -71,11 +61,11 @@ export const Projects = () => {
 
 const GridBox = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(344px,auto));
+    grid-template-columns: repeat(auto-fill, minmax(344px, auto));
     grid-auto-rows: auto;
     justify-content: center;
     gap: 62px 34px;
-    
+
 `;
 
 
