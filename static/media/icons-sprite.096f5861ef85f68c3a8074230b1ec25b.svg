@@ -98,7 +98,7 @@
     </g>
 
     <!--icons-->
-    <g id='iconGithub'>
+    <g id='github'>
         <path fill-rule="evenodd" clip-rule="evenodd"
               d="M44 0C19.69 0 0 19.69 0 44C0 63.47 12.595 79.915 30.085 85.745C32.285 86.13 33.11 84.81 33.11 83.655C33.11 82.61 33.055 79.145 33.055 75.46C22 77.495 19.14 72.765 18.26 70.29C17.765 69.025 15.62 65.12 13.75 64.075C12.21 63.25 10.01 61.215 13.695 61.16C17.16 61.105 19.635 64.35 20.46 65.67C24.42 72.325 30.745 70.455 33.275 69.3C33.66 66.44 34.815 64.515 36.08 63.415C26.29 62.315 16.06 58.52 16.06 41.69C16.06 36.905 17.765 32.945 20.57 29.865C20.13 28.765 18.59 24.255 21.01 18.205C21.01 18.205 24.695 17.05 33.11 22.715C36.63 21.725 40.37 21.23 44.11 21.23C47.85 21.23 51.59 21.725 55.11 22.715C63.525 16.995 67.21 18.205 67.21 18.205C69.63 24.255 68.09 28.765 67.65 29.865C70.455 32.945 72.16 36.85 72.16 41.69C72.16 58.575 61.875 62.315 52.085 63.415C53.68 64.79 55.055 67.43 55.055 71.555C55.055 77.44 55 82.17 55 83.655C55 84.81 55.825 86.185 58.025 85.745C66.7597 82.796 74.3497 77.1822 79.7268 69.6937C85.1039 62.2052 87.9974 53.219 88 44C88 19.69 68.31 0 44 0Z"
               fill="inherit"/>
@@ -228,6 +228,38 @@
         <path fill-rule="evenodd" clip-rule="evenodd"
               d="M4 1.5C3.46957 1.5 2.96086 1.65804 2.58579 1.93934C2.21071 2.22064 2 2.60218 2 3V9C2 9.39782 2.21071 9.77936 2.58579 10.0607C2.96086 10.342 3.46957 10.5 4 10.5H12C12.5304 10.5 13.0391 10.342 13.4142 10.0607C13.7893 9.77936 14 9.39782 14 9V3C14 2.60218 13.7893 2.22064 13.4142 1.93934C13.0391 1.65804 12.5304 1.5 12 1.5H4ZM12 2.5H4C3.82319 2.5 3.65362 2.55268 3.5286 2.64645C3.40357 2.74021 3.33333 2.86739 3.33333 3V9C3.33333 9.13261 3.40357 9.25979 3.5286 9.35355C3.65362 9.44732 3.82319 9.5 4 9.5H12C12.1768 9.5 12.3464 9.44732 12.4714 9.35355C12.5964 9.25979 12.6667 9.13261 12.6667 9V3C12.6667 2.86739 12.5964 2.74021 12.4714 2.64645C12.3464 2.55268 12.1768 2.5 12 2.5Z"
               fill="inherit"/>
+    </g>
+
+    <!-- carousel-->
+
+    <g id="carouselArrow" data-name="06-Play">
+        <polygon points="21 38 21 63 17 59 17 38 21 38" style="fill:#E63946"/>
+        <polygon points="21 1 21 26 17 26 17 5 21 1" style="fill:#E63946"/>
+        <polygon points="63 32 21 63 21 38 25 38 25 46 29 48 47 32 29 16 25 18 25 26 21 26 21 1 63 32"
+                 style="fill:#E63946"/>
+        <polygon points="25 3.952 21 1 21 26 25 26 25 18 25 3.952" style="fill:#E63946"/>
+        <path d="M47,32,29,48l-4-2V38H21V63L63,32,49.894,38.553A2,2,0,0,1,47,36.764Z" style="fill:#E63946"/>
+        <rect x="21" y="38" width="4" height="4" style="fill:inherit"/>
+        <rect x="1" y="26" width="4" height="12" style="fill:inherit"/>
+        <polygon points="29 38 29 48 25 46 25 38 29 38" style="fill:inherit"/>
+        <polygon points="29 16 29 26 25 26 25 18 29 16" style="fill:inherit"/>
+        <polygon points="47 32 29 48 29 38 25 38 21 38 17 38 5 38 5 26 17 26 21 26 25 26 29 26 29 16 47 32"
+                 style="fill:inherit"/>
+        <path d="M29,16V26H12a2,2,0,0,0,0,4H36l6.745,5.782L47,32Z" style="fill:inherit"/>
+        <rect x="1" y="30" width="4" height="8" style="fill:inherit"/>
+        <path d="M25,38v8l2,1V42a2,2,0,0,1,2-2V38Z" style="fill:inherit"/>
+        <path d="M27,22V17l-2,1v8h4V24A2,2,0,0,1,27,22Z" style="fill:inherit"/>
+        <line x1="21" y1="21" x2="21" y2="23" style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:2px"/>
+        <polyline points="31 55.619 63 32 21 1 21 19"
+                  style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:2px"/>
+        <polyline points="21 41 21 63 29.129 57" style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:2px"/>
+        <polyline points="17 38 17 59 21 63" style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:2px"/>
+        <polyline points="17 26 17 5 21 1" style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:2px"/>
+        <polyline points="8 26 5 26 5 38 29 38 29 48 47 32 29 16 29 26 10 26"
+                  style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:2px"/>
+        <polyline points="29 16 25 18 25 26" style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:2px"/>
+        <polyline points="25 38 25 46 29 48" style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:2px"/>
+        <polyline points="5 26 1 26 1 38 5 38" style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:2px"/>
     </g>
 
 </svg>
