@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-start-project/static/css/main.ba7ead02.css",
-    "main.js": "/portfolio-start-project/static/js/main.afd9b66f.js",
+    "main.css": "/portfolio-start-project/static/css/main.92feb4c8.css",
+    "main.js": "/portfolio-start-project/static/js/main.98ea4c39.js",
     "static/js/787.25eaef86.chunk.js": "/portfolio-start-project/static/js/787.25eaef86.chunk.js",
     "static/media/avaPng.png": "/portfolio-start-project/static/media/avaPng.63f795c1e0b3f26b8164.png",
     "static/media/projectCardCover.jpg": "/portfolio-start-project/static/media/projectCardCover.07875b900b2fef6da107.jpg",
@@ -12,12 +12,12 @@
     "static/media/Ellipse.svg": "/portfolio-start-project/static/media/Ellipse.a79b6c653c6b4da4ad0af8fdd64ed9f2.svg",
     "static/media/Polygon.svg": "/portfolio-start-project/static/media/Polygon.04d3d5ea96247328495e502c5357026e.svg",
     "static/media/EllipseSmoll.svg": "/portfolio-start-project/static/media/EllipseSmoll.709ede90298b02ea15d6933192aa21e7.svg",
-    "main.ba7ead02.css.map": "/portfolio-start-project/static/css/main.ba7ead02.css.map",
-    "main.afd9b66f.js.map": "/portfolio-start-project/static/js/main.afd9b66f.js.map",
+    "main.92feb4c8.css.map": "/portfolio-start-project/static/css/main.92feb4c8.css.map",
+    "main.98ea4c39.js.map": "/portfolio-start-project/static/js/main.98ea4c39.js.map",
     "787.25eaef86.chunk.js.map": "/portfolio-start-project/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba7ead02.css",
-    "static/js/main.afd9b66f.js"
+    "static/css/main.92feb4c8.css",
+    "static/js/main.98ea4c39.js"
   ]
 }
