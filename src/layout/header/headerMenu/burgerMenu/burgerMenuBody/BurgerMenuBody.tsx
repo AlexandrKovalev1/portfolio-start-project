@@ -9,8 +9,8 @@ type  BurgerMenuBodyPropsType = {
 export const BurgerMenuBody: React.FC<BurgerMenuBodyPropsType> = ({isOpen}) => {
 
     return (
-        <Styles.MenuBody isOpen={isOpen} >
-            <FlexContainer direction={"column"} justify={"space-evenly"} gap={"80px"} align={"center"}>
+        <Styles.MenuBody isOpen={isOpen} role={"dialog"} aria-modal>
+            <FlexContainer direction={"column"} justify={"space-between"} gap={"80px"} align={"center"}>
                 <Menu type={"burger"}/>
             </FlexContainer>
         </Styles.MenuBody>

@@ -87,6 +87,7 @@ const MenuBody = styled.div<{ isOpen: boolean }>`
     right: 0;
     top: 0;
     bottom: 0;
+    padding: 100px 0 50px;
     z-index: 999999;
     background-color: #E5E9ED;
 
@@ -95,6 +96,7 @@ const MenuBody = styled.div<{ isOpen: boolean }>`
     `};
 
     @media screen and (max-height: 650px) and (orientation: landscape) {
+        padding: 0;
         ${FlexContainer} {
             gap: 0;
         }

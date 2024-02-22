@@ -7,7 +7,7 @@ type MenuPropsType = {
 }
 export const Menu:React.FC<MenuPropsType> = ({type}) => {
     const navMenuHeaderState = [
-        {itemHeading: "Home", link: "", id: 1},
+        {itemHeading: "Home", link: "", id: 1,},
         {itemHeading: "About", link: "", id: 2},
         {itemHeading: "Tech Stack", link: "", id: 3},
         {itemHeading: "Projects", link: "", id: 4},

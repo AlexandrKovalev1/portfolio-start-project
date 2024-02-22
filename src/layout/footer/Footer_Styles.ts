@@ -4,7 +4,7 @@ const Footer = styled.footer`
     position: relative;
     background-color: #D6D9DD;
 
-    ::before {
+    :before {
         content: "";
         position: absolute;
         left: 50%;

@@ -22,6 +22,7 @@ const StyledNav = styled.nav<StyledNavPropsType>`
     
 
     ${props => props.type === "burger" && css<StyledNavPropsType>`
+        
         ${List} {
             font-size: calc((100vw - 360px) / (992 - 360) * (40 - 30) + 30px);
             flex-direction: column;
@@ -29,9 +30,7 @@ const StyledNav = styled.nav<StyledNavPropsType>`
             height: 100%;
 
             @media screen and (max-height: 650px) and (orientation: landscape) {
-                gap: 20px;
-                font-size: 20px;
-                letter-spacing: 3px;
+                gap: 10px;
             };
 
         }

@@ -8,19 +8,25 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+
+        @media (prefers-reduced-motion: reduce) {
+            animation: unset;
+            transition: unset;
+        }
     }
-    
+
     * {
         scrollbar-width: thin;
         scrollbar-color: red white;
     }
-    
+
     *::-webkit-scrollbar {
         height: 10px;
     }
+
     *::-webkit-scrollbar-track {
         background-color: #E5E9ED;
-        
+
     }
 
     *::-webkit-scrollbar-track-piece {
@@ -28,7 +34,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     *::-webkit-scrollbar-thumb {
-        background-color:#E63946;
+        background-color: #E63946;
         border-radius: 10px;
     }
 
@@ -60,7 +66,8 @@ export const GlobalStyle = createGlobalStyle`
     button {
         background-color: unset;
         border: none;
-        
+
     }
-    
+
 `;
+

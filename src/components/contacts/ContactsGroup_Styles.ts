@@ -29,10 +29,7 @@ const ContactsGroupWrapper = styled.div<ContactsGroupWrapperPropsType>`
         };
     `};
 
-    ${props => props.type === "footer" && css<ContactsGroupWrapperPropsType>`    position: absolute;
-        left: 50%;
-        bottom: 5%;
-        transform: translateX(-50%);
+    ${props => props.type === "footer" && css<ContactsGroupWrapperPropsType>`
         
        & ${List} svg {
             width: 17px;
