@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/portfolio-start-project/static/css/main.92feb4c8.css",
-    "main.js": "/portfolio-start-project/static/js/main.0fc2d7dc.js",
+    "main.js": "/portfolio-start-project/static/js/main.b8dbc115.js",
     "static/js/787.25eaef86.chunk.js": "/portfolio-start-project/static/js/787.25eaef86.chunk.js",
     "static/media/avaPng.png": "/portfolio-start-project/static/media/avaPng.63f795c1e0b3f26b8164.png",
+    "static/media/icons-sprite.svg": "/portfolio-start-project/static/media/icons-sprite.239a9184393c21d00fc5288ae75a999a.svg",
     "static/media/projectCardCover.jpg": "/portfolio-start-project/static/media/projectCardCover.07875b900b2fef6da107.jpg",
-    "static/media/icons-sprite.svg": "/portfolio-start-project/static/media/icons-sprite.096f5861ef85f68c3a8074230b1ec25b.svg",
     "index.html": "/portfolio-start-project/index.html",
     "static/media/plus1.svg": "/portfolio-start-project/static/media/plus1.a9aa28d451ce9f92c54e9c1bab7896d8.svg",
     "static/media/plus2.svg": "/portfolio-start-project/static/media/plus2.d3984112449ba71ed8d3700935725c47.svg",
@@ -13,11 +13,11 @@
     "static/media/Polygon.svg": "/portfolio-start-project/static/media/Polygon.04d3d5ea96247328495e502c5357026e.svg",
     "static/media/EllipseSmoll.svg": "/portfolio-start-project/static/media/EllipseSmoll.709ede90298b02ea15d6933192aa21e7.svg",
     "main.92feb4c8.css.map": "/portfolio-start-project/static/css/main.92feb4c8.css.map",
-    "main.0fc2d7dc.js.map": "/portfolio-start-project/static/js/main.0fc2d7dc.js.map",
+    "main.b8dbc115.js.map": "/portfolio-start-project/static/js/main.b8dbc115.js.map",
     "787.25eaef86.chunk.js.map": "/portfolio-start-project/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.92feb4c8.css",
-    "static/js/main.0fc2d7dc.js"
+    "static/js/main.b8dbc115.js"
   ]
 }
