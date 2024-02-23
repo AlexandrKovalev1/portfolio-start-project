@@ -19,12 +19,6 @@ export const LinkButton = styled.a<LinkButtonPropsType>`
     cursor: pointer;
     transition: 1s;
     
-
-    
-    @media${theme.media.mobile} {
-        width: calc(${props => props.width} * 0.7);
-        line-height: calc(${props => props.height} * 0.8);
-    }
     
 
     ${props => props.type==="outlined" && css<LinkButtonPropsType>`

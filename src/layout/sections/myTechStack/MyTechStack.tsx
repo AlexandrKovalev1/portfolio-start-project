@@ -48,5 +48,6 @@ export const MyTechStack:React.FC = () => {
 
 
 const StyledSectionMyStack = styled.section`
+    
     border-bottom: 1px solid #0000001A;
 `;

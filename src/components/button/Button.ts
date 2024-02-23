@@ -3,13 +3,13 @@ import {theme} from "../../styles/Theme";
 
 
 type ButtonPropsType = {
-    nameOfType: "Get" | "Contact"|"HireMe"
+    nameOfType: "Get" | "Contact" | "HireMe"
     height: string
     width: string
 };
 export const Button = styled.button<ButtonPropsType>`
-    width: ${props => props.width} ;
-    height: ${props => props.height };
+    width: ${props => props.width};
+    height: ${props => props.height};
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.03em;
@@ -17,10 +17,10 @@ export const Button = styled.button<ButtonPropsType>`
     border: 2px solid;
     border-radius: 30px;
     cursor: pointer;
-    white-space:nowrap;
-    transition:1s;
+    white-space: nowrap;
+    transition: 1s;
 
-    :hover,:focus {
+    :hover, :focus {
         background-color: ${theme.colors.primaryText};
         color: #ffffff;
     }
@@ -36,8 +36,8 @@ export const Button = styled.button<ButtonPropsType>`
     ${props => props.nameOfType === "HireMe" && css<ButtonPropsType>`
         border: 2px solid #E1E1E1;
         border-radius: unset;
-        
-        :hover,:focus {
+
+        :hover, :focus {
             background-color: ${theme.colors.primaryText};
             color: #ffffff;
         }
@@ -47,6 +47,6 @@ export const Button = styled.button<ButtonPropsType>`
             line-height: calc(${props => props.height} * 0.8);
         };
     `};
-    
+
 
 `;

@@ -13,6 +13,7 @@ const Link = styled.a`
         -webkit-text-shadow:0 0 10px ${theme.colors.accent}; 
         text-shadow:0 0 10px ${theme.colors.accent};
     }
+    
 `;
 
 export const Styles = {

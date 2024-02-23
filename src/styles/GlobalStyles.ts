@@ -53,6 +53,7 @@ export const GlobalStyle = createGlobalStyle`
 
     a {
         text-decoration: none;
+     
 
         :hover {
             color: ${theme.colors.accent};

@@ -15,10 +15,10 @@ export const Menu:React.FC<MenuPropsType> = ({type}) => {
     ];
 
     const menuContactsState = [
-        {iconId: "github", viewBox: "0 0 88 88", href:"#", id: 1},
+        {iconId: "github", viewBox: "0 0 88 88", href:"https://github.com/AlexandrKovalev1", id: 1},
         {iconId: "instagram", viewBox: "0 0 32 32", href:"#", id: 2},
-        {iconId: "telegram", viewBox: "0 0 32 35", href:"#", id: 3},
-        {iconId: "whatsapp", viewBox: "0 0 32 32", href:"#", id: 4}
+        {iconId: "telegram", viewBox: "0 0 32 35", href:"https://t.me/FrontendDevAlexander", id: 3},
+        {iconId: "whatsapp", viewBox: "0 0 32 32", href:"https://wa.me/79811064323", id: 4}
     ];
 
 

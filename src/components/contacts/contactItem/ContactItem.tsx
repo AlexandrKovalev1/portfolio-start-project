@@ -14,7 +14,7 @@ export const ContactItem:React.FC<ContactListItemPropsType> = ({href,iconId,view
 
     return (
         <Styles.ListItem>
-            <Styles.Link href={href} aria-label={`${iconId}`}>
+            <Styles.Link href={href} aria-label={`${iconId}`} target={"_blank"}>
                 <Icon iconId={iconId} width={"30"} height={"30"} viewBox={viewBox}/>
             </Styles.Link>
         </Styles.ListItem>
