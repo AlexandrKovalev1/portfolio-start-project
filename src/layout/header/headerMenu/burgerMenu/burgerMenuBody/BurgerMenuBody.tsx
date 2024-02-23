@@ -9,8 +9,8 @@ type  BurgerMenuBodyPropsType = {
 export const BurgerMenuBody: React.FC<BurgerMenuBodyPropsType> = ({isOpen,closeMenu}) => {
 
     return (
-        <Styles.MenuBody isOpen={isOpen} role={"dialog"} aria-modal onClick={()=>closeMenu(false)}>
-                <Menu type={"burger"}/>
+        <Styles.MenuBody isOpen={isOpen} role={"dialog"} aria-modal>
+                <Menu type={"burger"} closeModal={closeMenu}/>
         </Styles.MenuBody>
     );
 };

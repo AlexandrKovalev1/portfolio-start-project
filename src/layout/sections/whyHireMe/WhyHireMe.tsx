@@ -6,7 +6,7 @@ import {LinkButton} from "../../../components/linkButton/LinkButton";
 import {ExperienceItem} from "./experienceItem/ExperienceItem";
 import { Styles } from './WhyHireMe_Styles';
 
-export const WhyHireMe:React.FC = () => {
+export const WhyHireMe:React.FC<{setOpen:React.Dispatch<React.SetStateAction<boolean>>}> = ({setOpen}) => {
     return (
         <Styles.SectionWhy id={"about"}>
             <Container width={"1220px"}>
@@ -20,7 +20,7 @@ export const WhyHireMe:React.FC = () => {
                         </Styles.PartitionText>
 
                         <Styles.ButtonsGroup>
-                            <Button nameOfType={"HireMe"} width={"206px"} height={"56px"} >Hire Me</Button>
+                            <Button nameOfType={"HireMe"} width={"206px"} height={"56px"} onClick={()=>setOpen(true)} >Hire Me</Button>
                             <LinkButton type={"outlined"} href={"#"} width={"206px"} height={"56px"} download>Download
                                 CV</LinkButton>
                         </Styles.ButtonsGroup>

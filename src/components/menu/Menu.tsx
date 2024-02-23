@@ -3,9 +3,10 @@ import {Navigation} from "./navigation/Navigation";
 import {ContactsGroup} from "../contacts/ContactsGroup";
 
 type MenuPropsType = {
-    type:"desktop"|"burger"
+    type:"desktop"|"burger",
+    closeModal?:React.Dispatch<React.SetStateAction<boolean>>
 }
-export const Menu:React.FC<MenuPropsType> = ({type}) => {
+export const Menu:React.FC<MenuPropsType> = ({type,closeModal}) => {
     const navMenuHeaderState = [
         {itemHeading: "Home", link: "#home", id: 1,},
         {itemHeading: "About", link: "#about", id: 2},
@@ -14,18 +15,12 @@ export const Menu:React.FC<MenuPropsType> = ({type}) => {
         {itemHeading: "Contact", link: "#contact", id: 5}
     ];
 
-    const menuContactsState = [
-        {iconId: "github", viewBox: "0 0 88 88", href:"https://github.com/AlexandrKovalev1", id: 1},
-        {iconId: "instagram", viewBox: "0 0 32 32", href:"#", id: 2},
-        {iconId: "telegram", viewBox: "0 0 32 35", href:"https://t.me/FrontendDevAlexander", id: 3},
-        {iconId: "whatsapp", viewBox: "0 0 32 32", href:"https://wa.me/79811064323", id: 4}
-    ];
 
 
     return (
         <>
-            <Navigation menuState={navMenuHeaderState} type={type}/>
-            <ContactsGroup menuState={menuContactsState} type={type}/>
+            <Navigation menuState={navMenuHeaderState} type={type} closeModal={closeModal} />
+            <ContactsGroup type={type} closeModal={closeModal}/>
         </>
     );
 };

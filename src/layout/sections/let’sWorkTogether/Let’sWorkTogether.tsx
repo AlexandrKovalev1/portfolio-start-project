@@ -6,7 +6,7 @@ import {FlexContainer} from "../../../components/flexContainer/FlexContainer";
 import {Container} from "../../../components/container/Container";
 
 
-export const LetSWorkTogether:React.FC = () => {
+export const LetSWorkTogether:React.FC<{setOpen:React.Dispatch<React.SetStateAction<boolean>>}> = ({setOpen}) => {
     return (
         <StyledSectionLetsWork id={"contact"}>
 
@@ -14,7 +14,7 @@ export const LetSWorkTogether:React.FC = () => {
                 <FlexContainer direction={"column"} justify={"center"} align={"center"}>
                     <GroupOfHeadingSection heading={"Let’s work together"}
                                            description={"I’m available for freelance work. Have any projects in your mind? Just feel free to contact me"}/>
-                    <Button nameOfType={"Contact"} height={"60px"} width={"186px"}>Contact me</Button>
+                    <Button nameOfType={"Contact"} height={"60px"} width={"186px"} onClick={()=>setOpen(true)}>Contact me</Button>
                 </FlexContainer>
             </Container>
 

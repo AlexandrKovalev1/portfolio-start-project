@@ -9,12 +9,14 @@ type MenuPropsType = {
         id: number,
 
     }>,
-    type: "desktop" | "burger"
+    type: "desktop" | "burger",
+    closeModal?:React.Dispatch<React.SetStateAction<boolean>>
 };
-export const Navigation:React.FC<MenuPropsType> = ({menuState,type}) => {
+export const Navigation:React.FC<MenuPropsType> = ({menuState,type,closeModal}) => {
 
     const menuItems = menuState.map(item =>
         <NavigationItem
+            closeModal={closeModal}
             itemHeading={item.itemHeading}
             link={item.link}
             key={item.id}

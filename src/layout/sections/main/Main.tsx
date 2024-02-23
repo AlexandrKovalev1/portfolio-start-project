@@ -4,9 +4,14 @@ import {Container} from "../../../components/container/Container";
 import {Button} from "../../../components/button/Button";
 import {Styles} from "./Main_Styles";
 import Typewriter from 'typewriter-effect';
+import {createPortal} from "react-dom";
+import {ContactForm} from "../../../components/contactForm/ContactForm";
 
 
-export const Main:React.FC = () => {
+export const Main:React.FC<{setOpen:React.Dispatch<React.SetStateAction<boolean>>}> = ({setOpen}) => {
+
+
+
     return (
         <Styles.Main id={"home"}>
             <Container width={"1220px"}>
@@ -30,7 +35,9 @@ export const Main:React.FC = () => {
                             et. Non semper blandit vitae semper blandit. Tellus dignissim a dui turpis arcu, nulla
                             ullamcorper tincidunt.
                         </Styles.TextAbout>
-                        <Button nameOfType={"Get"} height={"60px"} width={"215px"}>GET IN TOUCH</Button>
+
+                            <Button nameOfType={"Get"} height={"60px"} width={"215px"} onClick={()=>{setOpen(true)}}>GET IN TOUCH</Button>
+
                     </Styles.DescriptionBlock>
 
                         <Styles.Photo src={ava} alt="photoCard"/>
