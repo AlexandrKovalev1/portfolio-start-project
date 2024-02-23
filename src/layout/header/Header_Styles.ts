@@ -9,7 +9,7 @@ const StyledHeader = styled.header`
     height: 130px;
     border-bottom: 1px solid #0000001A;
     background-color: #F9F9F980;
-    z-index: 999999;
+    z-index: 99;
 `;
 
 

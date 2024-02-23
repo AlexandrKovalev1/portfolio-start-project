@@ -1,18 +1,16 @@
 import React from 'react';
-import {FlexContainer} from "../../../../../components/flexContainer/FlexContainer";
 import {Menu} from "../../../../../components/menu/Menu";
 import {Styles} from "../BurgerMenu_Styles";
 
 type  BurgerMenuBodyPropsType = {
-    isOpen: boolean
+    isOpen: boolean,
+    closeMenu:React.Dispatch<React.SetStateAction<boolean>>
 };
-export const BurgerMenuBody: React.FC<BurgerMenuBodyPropsType> = ({isOpen}) => {
+export const BurgerMenuBody: React.FC<BurgerMenuBodyPropsType> = ({isOpen,closeMenu}) => {
 
     return (
-        <Styles.MenuBody isOpen={isOpen} role={"dialog"} aria-modal>
-            <FlexContainer direction={"column"} justify={"space-between"} gap={"80px"} align={"center"}>
+        <Styles.MenuBody isOpen={isOpen} role={"dialog"} aria-modal onClick={()=>closeMenu(false)}>
                 <Menu type={"burger"}/>
-            </FlexContainer>
         </Styles.MenuBody>
     );
 };

@@ -17,6 +17,7 @@ export const LinkButton = styled.a<LinkButtonPropsType>`
     color: #ffffff;
     white-space: nowrap;
     cursor: pointer;
+    transition: 1s;
     
 
     

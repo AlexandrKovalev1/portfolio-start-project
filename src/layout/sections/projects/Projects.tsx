@@ -50,7 +50,7 @@ export const Projects = () => {
 // </GridBox>
 
     return (
-        <SectionProject>
+        <SectionProject id={"projects"}>
             <Container width={"1220px"}>
                 <GroupOfHeadingSection heading={"Projects"} description={"Things I’ve built so far"}/>
                 <Carousel projects={ProjectsState}/>

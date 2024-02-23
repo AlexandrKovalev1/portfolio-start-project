@@ -70,7 +70,7 @@ const Main = styled.main`
         background-position: bottom -179px left -132px,
         top 100px left 41vw,
         right -197px top -157px,
-        center left 33%,
+        center left 75%,
         top 75% left 5%,
         top 89% left 38%,
         top 40% left 41%,

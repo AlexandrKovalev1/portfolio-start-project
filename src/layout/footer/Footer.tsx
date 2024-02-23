@@ -15,7 +15,7 @@ export const Footer = () => {
         <Styles.Footer>
             <Container width={"1274px"}>
                 <Styles.FooterContentWrapper>
-                    <small>© 2024 <b>Alexandr Kovalyov</b> with Love and Coffee. All rights reserved</small>
+                    <small>© 2024 <b>Alexandr Kovalyov</b> <span style={{whiteSpace:"nowrap"}}>with Love and Coffee. All rights reserved</span></small>
                     <ContactsGroup menuState={menuContactsState} type={"footer"}/>
                 </Styles.FooterContentWrapper>
             </Container>

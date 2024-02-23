@@ -8,7 +8,7 @@ import { Styles } from './WhyHireMe_Styles';
 
 export const WhyHireMe:React.FC = () => {
     return (
-        <Styles.SectionWhy>
+        <Styles.SectionWhy id={"about"}>
             <Container width={"1220px"}>
                 <FlexContainer justify={"space-between"}>
                     <Styles.PartitionWrapper>

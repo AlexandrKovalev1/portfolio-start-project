@@ -8,7 +8,7 @@ import Typewriter from 'typewriter-effect';
 
 export const Main:React.FC = () => {
     return (
-        <Styles.Main>
+        <Styles.Main id={"home"}>
             <Container width={"1220px"}>
                 <Styles.GridBox>
                     <Styles.TitleBlock>
@@ -33,8 +33,10 @@ export const Main:React.FC = () => {
                         <Button nameOfType={"Get"} height={"60px"} width={"215px"}>GET IN TOUCH</Button>
                     </Styles.DescriptionBlock>
 
+                        <Styles.Photo src={ava} alt="photoCard"/>
 
-                    <Styles.Photo src={ava} alt="photoCard"/>
+
+
                 </Styles.GridBox>
             </Container>
         </Styles.Main>

@@ -15,7 +15,7 @@ export const BurgerMenu:React.FC = () => {
             }} aria-label={ariaLabel}>
                 <span></span>
             </Styles.BurgerButton>
-            <BurgerMenuBody isOpen={isOpen}/>
+            <BurgerMenuBody isOpen={isOpen} closeMenu={setOpen}/>
         </Styles.BurgerMenuWrapper>
     );
 };

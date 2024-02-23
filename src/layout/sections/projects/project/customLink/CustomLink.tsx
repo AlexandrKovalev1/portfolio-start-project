@@ -20,11 +20,12 @@ export const CustomLink:React.FC<CustomLinkPropsType> = ({href,type}) => {
         viewBox = "-2 -2 90 90";
         headingLink = "View Code";
         ariaLabel="View code to github";
+
     }
 
 
     return (
-        <Styles.Link href={href} aria-label={ariaLabel}>
+        <Styles.Link href={href} aria-label={ariaLabel} >
             <Icon iconId={linkId} width={"20px"} height={"20px"} viewBox={viewBox}/>
             {headingLink}
         </Styles.Link>

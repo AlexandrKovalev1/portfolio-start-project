@@ -1,6 +1,5 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../../styles/Theme";
-import {FlexContainer} from "../../../../components/flexContainer/FlexContainer";
 
 const BurgerMenuWrapper = styled.div`
 `;
@@ -79,7 +78,11 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 `;
 
 const MenuBody = styled.div<{ isOpen: boolean }>`
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -90,16 +93,16 @@ const MenuBody = styled.div<{ isOpen: boolean }>`
     padding: 100px 0 50px;
     z-index: 999999;
     background-color: #E5E9ED;
+    transform: translateX(-100%);
+    transition: 1.5s;
 
     ${props => props.isOpen && css`
-        display: block;
+        transform: translateX(0);
     `};
 
     @media screen and (max-height: 650px) and (orientation: landscape) {
         padding: 0;
-        ${FlexContainer} {
             gap: 0;
-        }
     }
 `;
 

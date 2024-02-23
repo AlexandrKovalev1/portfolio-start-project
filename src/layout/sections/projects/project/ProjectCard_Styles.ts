@@ -13,8 +13,11 @@ const Link = styled.a`
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
-
     color: initial;
+    
+    svg {
+        fill: #2D2D2D;
+    }
 `;
 
 

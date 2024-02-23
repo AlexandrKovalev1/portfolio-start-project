@@ -50,8 +50,7 @@
     right: 20px;
 }
 
-.alice-carousel__dots-item:not(.__custom):hover, .alice-carousel__dots-item:not(.__custom).__active {
-
+ .alice-carousel__dots-item:not(.__custom).__active {
     border:2px dashed #E63946;
     background-color: #B8B8B8;
 }

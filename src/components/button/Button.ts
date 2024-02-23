@@ -18,6 +18,7 @@ export const Button = styled.button<ButtonPropsType>`
     border-radius: 30px;
     cursor: pointer;
     white-space:nowrap;
+    transition:1s;
 
     :hover,:focus {
         background-color: ${theme.colors.primaryText};

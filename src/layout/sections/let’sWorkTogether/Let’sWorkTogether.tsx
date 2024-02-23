@@ -8,7 +8,7 @@ import {Container} from "../../../components/container/Container";
 
 export const LetSWorkTogether:React.FC = () => {
     return (
-        <StyledSectionLetsWork>
+        <StyledSectionLetsWork id={"contact"}>
 
             <Container width={"712px"}>
                 <FlexContainer direction={"column"} justify={"center"} align={"center"}>
