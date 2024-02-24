@@ -67,7 +67,7 @@ const ContactFormWrapper = styled.div`{
     left: 0;
     z-index: 9999999999;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding: 30px 0;
     background-color: #FAFAFA;
 `;
@@ -80,6 +80,7 @@ const ButtonClose = styled.button`
     right: 0;
     transform: translate(-100%, 100%);
     cursor: pointer;
+    z-index: 1;
     
     span {
         display: inline-block;
@@ -140,6 +141,10 @@ const TitleBlock = styled.div`
             max-width: unset;
         }
     }
+
+    @media screen and (max-height: 500px) and (orientation:landscape){
+        display: none;
+    }
 `;
 
 const Form = styled.form`
@@ -148,6 +153,11 @@ const Form = styled.form`
     flex-direction: column;
     align-items: center;
     gap: 50px;
+
+    @media screen and (max-height: 500px) and (orientation:landscape){
+        gap:25px;
+        justify-content: end;
+    }
 `;
 
 const SendBlock = styled.div`

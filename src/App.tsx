@@ -47,17 +47,17 @@ const AppWrapperStyled = styled.div`
         display: flex;
         align-items: center;
         padding: 150px 0;
-        scroll-margin-top:130px;
+        
     }
     
     @media${theme.media.largeDesc} {
         section{
+            scroll-margin-top:130px;
+            min-height: 100vh;
             padding: 50px 0 130px;
         }
         
     }
-    
-    
-`
+`;
 
 export default App;

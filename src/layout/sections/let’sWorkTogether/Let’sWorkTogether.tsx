@@ -18,7 +18,6 @@ export const LetSWorkTogether:React.FC<{setOpen:React.Dispatch<React.SetStateAct
                 </FlexContainer>
             </Container>
 
-
         </StyledSectionLetsWork>
     );
 };
