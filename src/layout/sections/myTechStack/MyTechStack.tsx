@@ -4,10 +4,10 @@ import {FlexContainer} from "../../../components/flexContainer/FlexContainer";
 import {Icon} from "../../../components/icon/Icon";
 import styled from "styled-components";
 import {Container} from "../../../components/container/Container";
-import { Bounce } from "react-awesome-reveal";
+import {Bounce} from "react-awesome-reveal";
 
 
-export const MyTechStack:React.FC = () => {
+export const MyTechStack: React.FC = () => {
 
     const myStackState = [{id: 0, idIcon: "html", width: "120", height: "120", viewBox: "0 0 120 120"},
         {id: 1, idIcon: "css", width: "120", height: "120", viewBox: "0 0 120 120"},
@@ -22,22 +22,24 @@ export const MyTechStack:React.FC = () => {
 
     ];
 
-    const MyStacks = myStackState.map(item => <Bounce cascade={true} duration={2100} delay={300} >
-        <Icon
-        iconId={item.idIcon}
-        width={item.width}
-        height={item.height}
-        viewBox={item.viewBox}
-        key={item.id}
-    />
-        </Bounce>)
+    const MyStacks = myStackState.map(item => (
+        <Bounce cascade={true} duration={2100} delay={300}>
+            <Icon
+                iconId={item.idIcon}
+                width={item.width}
+                height={item.height}
+                viewBox={item.viewBox}
+                key={item.id}
+            />
+        </Bounce>
+    ))
 
     return (
         <StyledSectionMyStack id={"techStack"}>
             <Container width={"1220px"}>
                 <GroupOfHeadingSection
                     heading={"My Tech Stack"}
-                    description={"Technologies I’ve been working with recently"} />
+                    description={"Technologies I’ve been working with recently"}/>
                 <FlexContainer gap={"95px"} wrap={"wrap"} justify={"center"}>
                     {MyStacks}
                 </FlexContainer>
@@ -48,6 +50,6 @@ export const MyTechStack:React.FC = () => {
 
 
 const StyledSectionMyStack = styled.section`
-    
+
     border-bottom: 1px solid #0000001A;
 `;

@@ -1,22 +1,23 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
-import {BurgerMenuBody} from "./burgerMenuBody/BurgerMenuBody";
+import { BurgerMenuBody } from './burgerMenuBody/BurgerMenuBody';
 import { Styles } from './BurgerMenu_Styles';
 
-export const BurgerMenu:React.FC = () => {
+export const BurgerMenu: React.FC = () => {
+	const [isOpen, setOpen] = useState(false);
 
-    const [isOpen, setOpen] = useState(false);
+	const closeMenu = () => setOpen(false);
 
-    let ariaLabel = isOpen?"close":"open burger menu"
-    return (
-        <Styles.BurgerMenuWrapper>
-            <Styles.BurgerButton isOpen={isOpen} onClick={() => {
-                setOpen(!isOpen)
-            }} aria-label={ariaLabel}>
-                <span></span>
-            </Styles.BurgerButton>
-            <BurgerMenuBody isOpen={isOpen} closeMenu={setOpen}/>
-        </Styles.BurgerMenuWrapper>
-    );
+	return (
+		<Styles.BurgerMenuWrapper>
+			<Styles.BurgerButton
+				isOpen={isOpen}
+				onClick={() => setOpen(!isOpen)}
+				aria-label={isOpen ? 'close' : 'open burger menu'}
+			>
+				<span></span>
+			</Styles.BurgerButton>
+			<BurgerMenuBody isOpen={isOpen} closeMenu={closeMenu} />
+		</Styles.BurgerMenuWrapper>
+	);
 };
-
