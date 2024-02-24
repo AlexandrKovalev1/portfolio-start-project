@@ -4,8 +4,7 @@ import {Container} from "../../../components/container/Container";
 import {Button} from "../../../components/button/Button";
 import {Styles} from "./Main_Styles";
 import Typewriter from 'typewriter-effect';
-import {createPortal} from "react-dom";
-import {ContactForm} from "../../../components/contactForm/ContactForm";
+
 
 
 export const Main:React.FC<{setOpen:React.Dispatch<React.SetStateAction<boolean>>}> = ({setOpen}) => {
